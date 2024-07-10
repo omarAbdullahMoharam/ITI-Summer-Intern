@@ -1,0 +1,11 @@
+ 
+Dart:
+
+- Dart installation 	
+
+- Dart Basics :
+	1- Primitive Datatypes ( int - double - bool - num - String - null ) 
+	2- STLs (List - Set - Map - Runes)	
+	3- Logical operators ( And && - OR || - NOT ! )
+	4- Ternary Operators ( ?: - ?? )
+	5- Casting ( as ) 
