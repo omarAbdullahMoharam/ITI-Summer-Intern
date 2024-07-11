@@ -9,7 +9,7 @@ void main(List<String> args) {
   num years = 21;
   num months = 7;
   num temp = years + months;
-  print("""Summition is  $temp and age is $years year and $months months
+  print("""Summation is  $temp and age is $years year and $months months
   ------------------------""");
 //Strings
   String FirstName = "Omar";
@@ -53,11 +53,11 @@ void main(List<String> args) {
   Map<String, dynamic> nums = {"name": 'omar', 'age': 21, 'salary': 15900};
   print("""$nums
   ------------------------""");
-// List ==> let dublication
+// List ==> let duplication
   List<int> listtt = [1, 2, 3, 1, 5];
   print('''$listtt
   ------------------------''');
-// Set ==> prevent dublication
+// Set ==> prevent duplication
   Set<int> sett = {1, 2, 3, 1, 5};
   print('''$sett
   ------------------------''');

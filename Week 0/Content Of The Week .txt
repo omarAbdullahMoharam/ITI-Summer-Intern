@@ -9,3 +9,30 @@ Dart:
 	3- Logical operators ( And && - OR || - NOT ! )
 	4- Ternary Operators ( ?: - ?? )
 	5- Casting ( as ) 
+	6- Unary operators ( ++ , -- )
+	7- Assignment Operators ( = , += , -= , *= , /= , %= )
+	8- Explicit and implicit Casting
+	9- Control Flow Statements
+		A- If Statements ( if , if else , if else if else )
+		B- Switch Case ( case : break , Default ) 
+		
+	10- Loops
+		A- For loop 
+		B- While loop
+		C- Do while
+		
+	11- Continue & Break 
+
+	12- Functions 
+		* Functions Statement
+		* Functions Expression
+		* Anonymous Function
+		* Named Function
+		* First Class Function
+		* Arrow Function
+		* Curring Function
+		* Callback Function
+		* Higher Order Function (HOF)
+		* Parameters VS Arguments
+
+
