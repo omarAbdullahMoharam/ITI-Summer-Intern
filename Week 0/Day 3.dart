@@ -103,6 +103,7 @@ abstract class person {
 }
 
 // must override all variables and functions exists on the parent  abstract class
+// (extends) keyword
 class student extends person {
   int? grade;
   double? gpa;
@@ -133,10 +134,10 @@ mixin Play {
   }
 }
 
-// inheritance in Mixin
+// inheritance in Mixin ===> (with) keyword
 class Students with Play, Study {
   void displayData() {
     print("Student can study and play");
   }
 }
-// 🚨🚨Task is to apply this code by yourself 🔻🔻
+// 🚨🚨 Task is to apply this code by yourself 🔻🔻
