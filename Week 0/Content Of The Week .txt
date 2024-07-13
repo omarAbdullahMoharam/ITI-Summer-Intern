@@ -35,4 +35,10 @@ Dart:
 		* Higher Order Function (HOF)
 		* Parameters VS Arguments
 
-
+	13- Inheritance
+	14- Mixin
+	15- abstraction
+	16- Named Constructor
+	17- extends keyword 
+	18- override keyword
+	19- with keyword
