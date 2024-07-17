@@ -47,7 +47,7 @@ Dart:
 
 	1- Synchronization keywords:
 		* sync - async - async* - Future - await
-		* Stream - yield
+		* Stream - yield*
 
 - Object Oriented Design (OOD) :
 
