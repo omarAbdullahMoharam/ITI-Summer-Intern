@@ -47,8 +47,10 @@ Stream<int> generateCountStream(int count) async* {
 
 
 /*
+
+🔻🔻🔻🔻🔻🔻🔻🔻Object Oriented Design (OOD) 🔻🔻🔻🔻🔻🔻🔻🔻
 // void main(List<String> arguments) {
-//   //KISS
+//   🚨🚨Keep It Simple, Stupid (KISS)🚨🚨
 //   // var x = [2, 3, 4, 5];
 //   // void multiplyAndPrint(List<int> numbers) {
 //   //   var result = 1;
@@ -66,7 +68,8 @@ Stream<int> generateCountStream(int count) async* {
 //   // multiplyAndPrint(x);
 // }
 
-//DRY
+// ****************
+//  🚨🚨Don't Repeat Yourself (DRY)🚨🚨
 // void displayGreetingInEnglish() {
 //   print("Hello");
 // }
@@ -83,8 +86,9 @@ Stream<int> generateCountStream(int count) async* {
 //   print(greet);
 // }
 
-/////////////////////////SOLID///////
-/* ///SRP
+////🔻🔻🔻🔻🔻🔻🔻🔻SOLID Principles (SOLID)🔻🔻🔻🔻🔻🔻🔻🔻///////
+
+/* ///Single Responsibility Principle (SRP)👌
 
 
 //Violating SRP
@@ -126,7 +130,7 @@ Stream<int> generateCountStream(int count) async* {
 // }
 
 */
-
+    // ---------Open/Closed Principle (OCP)👌
 //without OCP
 // class Rectangle {
 //   double width;
@@ -189,7 +193,7 @@ Stream<int> generateCountStream(int count) async* {
 
 /////////////
 ///
-///LSP
+///Interface Segregation Principle (ISP)👌
 
 // class Bird {
 //   void fly() {}
@@ -227,7 +231,7 @@ Stream<int> generateCountStream(int count) async* {
 /////////////////////////
 ///
 ///
-///
+/// Interface Segregation Principle (ISP)👌
 // without ISP
 abstract class Worker {
   void work();
@@ -275,7 +279,9 @@ class Robot implements Workable {
 }
 
 ///////////////////////////////////////////////////
-// without DIP
+///
+//------------------Dependency Inversion Principle (DIP)👌
+//without DIP
 class MySQLDatabase {
   void connect() {}
 }
