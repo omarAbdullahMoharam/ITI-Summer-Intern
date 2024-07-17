@@ -42,3 +42,21 @@ Dart:
 	17- extends keyword 
 	18- override keyword
 	19- with keyword
+
+- Important Dart keywords :
+
+	1- Synchronization keywords:
+		* sync - async - Future - await
+		* Stream - yield
+
+- Object Oriented Design (OOD) :
+
+	* Keep It Simple, Stupid (KISS)
+	* Don't Repeat Yourself (DRY)
+
+- SOLID Principles (SOLID) :
+
+	* Single Responsibility Principle (SRP)
+	* Open/Closed Principle (OCP)
+	* Interface Segregation Principle (ISP)
+	* Dependency Inversion Principle (DIP)
