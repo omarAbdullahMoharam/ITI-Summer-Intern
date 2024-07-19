@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, dead_code
+
 void main(List<String> args) {
 // Numbers
   double a = 1.5;
@@ -58,6 +60,7 @@ void main(List<String> args) {
   print('''$listtt
   ------------------------''');
 // Set ==> prevent duplication
+  // ignore: equal_elements_in_set
   Set<int> sett = {1, 2, 3, 1, 5};
   print('''$sett
   ------------------------''');
