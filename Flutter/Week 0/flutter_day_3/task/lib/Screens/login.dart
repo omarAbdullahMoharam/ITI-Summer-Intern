@@ -133,7 +133,10 @@ class _LoginPageState extends State<LoginPage> {
                               });
                             },
                           ),
-                          const Text('Remember me'),
+                          const Text(
+                            'Remember me',
+                            textAlign: TextAlign.start,
+                          ),
                         ],
                       ),
                       const Text(
@@ -160,6 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           );
                         },
+                        width: double.infinity,
                       );
                     },
                   ),
@@ -170,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.push(
                           newContext,
                           MaterialPageRoute(
-                            builder: (context) => const RegisterPage(),
+                            builder: (context) => RegisterPage(),
                           ),
                         );
                       },
@@ -190,8 +194,7 @@ class _LoginPageState extends State<LoginPage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                          const RegisterPage(),
+                                      builder: (context) => RegisterPage(),
                                     ),
                                   );
                                 },
