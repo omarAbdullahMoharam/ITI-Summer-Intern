@@ -75,10 +75,11 @@ class WelcomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const RegisterPage(),
+                            builder: (context) => RegisterPage(),
                           ),
                         );
                       },
+                      width: double.infinity,
                     );
                   }),
                   const SizedBox(
@@ -97,6 +98,7 @@ class WelcomePage extends StatelessWidget {
                           ),
                         );
                       },
+                      width: double.infinity,
                     );
                   }),
                   const Spacer(flex: 7),
