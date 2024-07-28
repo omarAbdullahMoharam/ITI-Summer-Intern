@@ -4,7 +4,7 @@ import 'package:task/Screens/register.dart';
 import 'package:task/Screens/welcome.dart';
 
 void main() {
-  runApp(const WelcomePage());
+  runApp(const RegisterPage());
 }
 
 class Task extends StatelessWidget {
@@ -17,6 +17,7 @@ class Task extends StatelessWidget {
       routes: {
         '/Login': (context) => const LoginPage(),
         '/register': (context) => const RegisterPage(),
+        '/welcome': (context) => const WelcomePage(),
       },
     );
   }
