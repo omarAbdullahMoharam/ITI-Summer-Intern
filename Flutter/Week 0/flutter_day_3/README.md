@@ -1,4 +1,4 @@
-# flutter_day_2
+# flutter Diaries
 
 A new Flutter project.
 
