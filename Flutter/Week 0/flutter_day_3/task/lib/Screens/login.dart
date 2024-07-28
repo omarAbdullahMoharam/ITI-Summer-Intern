@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:task/Screens/register.dart';
 import 'package:task/Screens/welcome.dart';
@@ -13,7 +12,11 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final _formKey = GlobalKey<FormState>();
   bool rememberMe = true;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
         bottomSheet: Container(
-          height: 460,
+          height: 502,
           width: double.infinity,
           padding: const EdgeInsets.all(16),
           decoration: const BoxDecoration(
@@ -45,136 +48,165 @@ class _LoginPageState extends State<LoginPage> {
               bottomRight: Radius.circular(2),
             ),
           ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Row(children: [
-                const Text(
-                  'Welcome Back!!!',
-                  style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w400,
-                      color: Color(0xff050522)),
-                ),
-                const Spacer(
-                  flex: 1,
-                ),
-                Builder(builder: (context) {
-                  return IconButton(
-                    icon: const Icon(
-                      Icons.cancel_outlined,
-                      color: Color(0xffEF5858),
-                      size: 30,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const WelcomePage(),
-                        ),
-                      );
-                    },
-                  );
-                }),
-              ]),
-              const SizedBox(height: 10),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    'Login',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xff050522),
-                    ),
-                    textAlign: TextAlign.start,
-                  ),
-                ],
-              ),
-              const SizedBox(height: 10),
-              Column(
-                children: [
-                  const TextField(
-                    decoration: InputDecoration(
-                        labelText: 'username/email',
-                        border: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(width: 2, color: Color(0xff050522))),
-                        hintText: 'info@example.com',
-                        suffixIcon: Icon(Icons.remove_red_eye_outlined)),
-                  ),
-                  const SizedBox(height: 5),
-                  const TextField(
-                    decoration: InputDecoration(
-                      labelText: 'password',
-                      suffixIcon: Icon(Icons.lock_outline),
-                      border: OutlineInputBorder(),
-                    ),
-                    obscureText: true,
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Checkbox(
-                            checkColor: const Color(0xff050522),
-                            activeColor: Colors.white,
-                            fillColor: WidgetStateProperty.all(Colors.white),
-                            splashRadius: 1,
-                            focusColor: const Color(0xff050522),
-                            value: rememberMe,
-                            onChanged: (bool? newValue) {
-                              setState(() {
-                                rememberMe = newValue!;
-                                log(rememberMe.toString());
-                              });
-                            },
-                          ),
-                          const Text(
-                            'Remember me',
-                            textAlign: TextAlign.start,
-                          ),
-                        ],
+          child: Form(
+            key: _formKey,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  children: [
+                    const Text(
+                      'Welcome Back!!!',
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xff050522),
                       ),
-                      const Text(
-                        'Forgot Password?',
-                        style:
-                            TextStyle(color: Color(0xff050522), fontSize: 12),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      icon: const Icon(
+                        Icons.cancel_outlined,
+                        color: Color(0xffEF5858),
+                        size: 30,
                       ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 6,
-                  ),
-                  Builder(
-                    builder: (BuildContext context) {
-                      return CustomButton(
-                        label: 'Login',
-                        backgroundColor: const Color(0xff050522),
-                        fontColor: const Color(0xffFFDE69),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const WelcomePage(),
-                            ),
-                          );
-                        },
-                        width: double.infinity,
-                      );
-                    },
-                  ),
-                  const SizedBox(height: 5),
-                  Builder(builder: (BuildContext newContext) {
-                    return TextButton(
                       onPressed: () {
                         Navigator.push(
-                          newContext,
+                          context,
                           MaterialPageRoute(
-                            builder: (context) => RegisterPage(),
+                            builder: (context) => const WelcomePage(),
+                          ),
+                        );
+                      },
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Login',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xff050522),
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Column(
+                  children: [
+                    TextFormField(
+                      controller: _emailController,
+                      decoration: const InputDecoration(
+                        labelText: 'username/email',
+                        border: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 2, color: Color(0xff050522)),
+                        ),
+                        hintText: 'info@example.com',
+                        suffixIcon: Icon(Icons.email_outlined),
+                      ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your email';
+                        }
+                        final email = value.trim().toLowerCase();
+                        final RegExp emailRegExp =
+                            RegExp(r'^[^@]+@[^@]+\.[^@]+$');
+                        if (!emailRegExp.hasMatch(email)) {
+                          return 'Please enter a valid email address';
+                        }
+                        if (value.contains(RegExp(r'[A-Z]'))) {
+                          return 'Email must be in lowercase';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    TextFormField(
+                      controller: _passwordController,
+                      decoration: const InputDecoration(
+                        labelText: 'password',
+                        suffixIcon: Icon(Icons.lock_outline),
+                        border: OutlineInputBorder(),
+                      ),
+                      obscureText: true,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your password';
+                        }
+                        if (value.length < 8) {
+                          return 'Password must be at least 8 characters long';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Checkbox(
+                              checkColor: const Color(0xff050522),
+                              activeColor: Colors.white,
+                              fillColor:
+                                  MaterialStateProperty.all(Colors.white),
+                              splashRadius: 1,
+                              focusColor: const Color(0xff050522),
+                              value: rememberMe,
+                              onChanged: (bool? newValue) {
+                                setState(() {
+                                  rememberMe = newValue!;
+                                  log(rememberMe.toString());
+                                });
+                              },
+                            ),
+                            const Text(
+                              'Remember me',
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                        const Text(
+                          'Forgot Password?',
+                          style:
+                              TextStyle(color: Color(0xff050522), fontSize: 12),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 6),
+                    Builder(
+                      builder: (BuildContext context) {
+                        return CustomButton(
+                          label: 'Login',
+                          backgroundColor: const Color(0xff050522),
+                          fontColor: const Color(0xffFFDE69),
+                          onPressed: () {
+                            if (_formKey.currentState?.validate() ?? false) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const WelcomePage(),
+                                ),
+                              );
+                            }
+                          },
+                          width: double.infinity,
+                        );
+                      },
+                    ),
+                    const SizedBox(height: 5),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RegisterPage(),
                           ),
                         );
                       },
@@ -183,187 +215,39 @@ class _LoginPageState extends State<LoginPage> {
                           const Text(
                             "Don't have an account?",
                             style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xff050522)),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              color: Color(0xff050522),
+                            ),
                           ),
-                          Builder(
-                            builder: (BuildContext context) {
-                              return TextButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => RegisterPage(),
-                                    ),
-                                  );
-                                },
-                                child: const Text(
-                                  'Register',
-                                  style: TextStyle(
-                                      color: Color(0xffEF5858),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const RegisterPage(),
                                 ),
                               );
                             },
+                            child: const Text(
+                              'Register',
+                              style: TextStyle(
+                                color: Color(0xffEF5858),
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ],
                       ),
-                    );
-                  }),
-                ],
-              ),
-            ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
-
-
-// MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: Scaffold(
-//         backgroundColor:    Color(0xff050522),
-//         body: Center(
-//           child: SingleChildScrollView(
-//             child: Column(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               children: [
-//                 // Top image section
-//                 Container(
-//                   width: double.infinity,
-//                   height: 300,
-//                   decoration:    BoxDecoration(
-//                     borderRadius: BorderRadius.only(
-//                       bottomLeft: Radius.circular(40),
-//                       bottomRight: Radius.circular(40),
-//                     ),
-//                     color: Colors.yellow,
-//                   ),
-//                   child: Center(
-//                     child: Image.asset(
-//                       'assets/images/welcome.png',
-//                       width: 273.41,
-//                       height: 301.07,
-//                     ),
-//                   ),
-//                 ),
-//                 // Login form section
-//                 Container(
-//                   padding:
-//                          EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-//                   margin:
-//                          EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-//                   decoration: BoxDecoration(
-//                     borderRadius: BorderRadius.circular(20),
-//                     color: Colors.white,
-//                   ),
-//                   child: Column(
-//                     crossAxisAlignment: CrossAxisAlignment.start,
-//                     children: [
-//                          Text(
-//                         "Welcome Back!!!",
-//                         style: TextStyle(
-//                           fontSize: 16,
-//                           color: Colors.black54,
-//                         ),
-//                       ),
-//                          SizedBox(height: 10),
-//                          Text(
-//                         "Login",
-//                         style: TextStyle(
-//                           fontSize: 22,
-//                           fontWeight: FontWeight.bold,
-//                         ),
-//                       ),
-//                          SizedBox(height: 20),
-//                          TextField(
-//                         decoration: InputDecoration(
-//                           labelText: "Username/email",
-//                           hintText: "info@example.com",
-//                           prefixIcon: Icon(Icons.person),
-//                           border: OutlineInputBorder(),
-//                         ),
-//                       ),
-//                          SizedBox(height: 20),
-//                          TextField(
-//                         obscureText: true,
-//                         decoration: InputDecoration(
-//                           labelText: "Password",
-//                           prefixIcon: Icon(Icons.lock),
-//                           suffixIcon: Icon(Icons.visibility),
-//                           border: OutlineInputBorder(),
-//                         ),
-//                       ),
-//                          SizedBox(height: 20),
-//                       Row(
-//                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                         children: [
-//                           Row(
-//                             children: [
-//                               Checkbox(value: false, onChanged: (value) {}),
-//                                  Text("Remember me"),
-//                             ],
-//                           ),
-//                           TextButton(
-//                             onPressed: () {},
-//                             child:    Text("Forgot Password?"),
-//                           ),
-//                         ],
-//                       ),
-//                          SizedBox(height: 20),
-//                       Center(
-//                         child: ElevatedButton(
-//                           style: ElevatedButton.styleFrom(
-//                             backgroundColor: Colors.black,
-//                             padding:    EdgeInsets.symmetric(
-//                                 horizontal: 40, vertical: 15),
-//                           ),
-//                           onPressed: () {
-//                             Fluttertoast.showToast(
-//                               msg: "Login Button Pressed",
-//                               toastLength: Toast.LENGTH_LONG,
-//                               gravity: ToastGravity.BOTTOM,
-//                               backgroundColor: Colors.black,
-//                               textColor: Colors.white,
-//                               fontSize: 16.0,
-//                             );
-//                           },
-//                           child:    Text("Login"),
-//                         ),
-//                       ),
-//                          SizedBox(height: 20),
-//                       Center(
-//                         child: RichText(
-//                           text: TextSpan(
-//                             text: "Don’t have an account? ",
-//                             style:    TextStyle(color: Colors.black54),
-//                             children: <TextSpan>[
-//                               TextSpan(
-//                                 text: "Register",
-//                                 style:    TextStyle(color: Colors.red),
-//                                 recognizer: TapGestureRecognizer()
-//                                   ..onTap = () {
-//                                     Navigator.push(
-//                                         context,
-//                                         MaterialPageRoute(
-//                                             builder: (context) =>
-//                                                    RegisterPage()));
-//                                   },
-//                               ),
-//                             ],
-//                           ),
-//                         ),
-//                       ),
-//                     ],
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ),
-//       ),
-
