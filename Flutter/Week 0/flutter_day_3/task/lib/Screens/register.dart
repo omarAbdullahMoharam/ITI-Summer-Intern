@@ -194,12 +194,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 CustomButton(
                   label: 'Register',
                   onPressed: () {
-                    if (_formKey.currentState?.validate() ?? false) {
-                      // Perform registration
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Processing Data')),
-                      );
-                    }
+                    if (_formKey.currentState?.validate() ?? false) {}
                   },
                   backgroundColor: const Color(0xff050522),
                   fontColor: const Color(0xffFFDE69),

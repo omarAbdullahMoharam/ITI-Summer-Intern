@@ -41,6 +41,3 @@ class CustomInputField extends StatelessWidget {
     );
   }
 }
-
-
-//  Icon(Icons.remove_red_eye_outlined)

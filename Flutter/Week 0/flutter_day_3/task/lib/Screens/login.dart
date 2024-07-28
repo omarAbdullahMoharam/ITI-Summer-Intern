@@ -154,8 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                             Checkbox(
                               checkColor: const Color(0xff050522),
                               activeColor: Colors.white,
-                              fillColor:
-                                  MaterialStateProperty.all(Colors.white),
+                              fillColor: WidgetStateProperty.all(Colors.white),
                               splashRadius: 1,
                               focusColor: const Color(0xff050522),
                               value: rememberMe,

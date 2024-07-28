@@ -4,7 +4,7 @@ import 'package:task/Screens/register.dart';
 import 'package:task/Screens/welcome.dart';
 
 void main() {
-  runApp(const RegisterPage());
+  runApp(const WelcomePage());
 }
 
 class Task extends StatelessWidget {
