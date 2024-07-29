@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart'; // Importing Flutter's material design package
 import '../components/custom_text_field.dart'; // Importing custom text field widget
 import '../components/custom_button.dart'; // Importing custom button widget
@@ -7,6 +9,7 @@ class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key}); // Constructor with optional key parameter
 
   @override
+  // ignore: library_private_types_in_public_api
   _RegisterScreenState createState() =>
       _RegisterScreenState(); // Creating the state for this widget
 }
@@ -79,7 +82,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   void initState() {
-    print("Hello from initState ");
+    log("Hello from initState ");
     super.initState();
   }
 
