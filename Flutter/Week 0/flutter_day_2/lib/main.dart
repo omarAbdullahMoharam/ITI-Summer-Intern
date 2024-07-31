@@ -200,7 +200,6 @@ class _HomePageState extends State<HomePage> {
 
 // class layoutWidgets extends StatelessWidget {
 //   const layoutWidgets({super.key});
-
 //   @override
 //   Widget build(BuildContext context) {
 //     return const MaterialApp(
@@ -280,7 +279,6 @@ class _HomePageState extends State<HomePage> {
 //                 //   height: 100,
 //                 //   color: Colors.blue,
 //                 // ),
-
 //                 SingleChildScrollView(
 //       scrollDirection: Axis.horizontal,
 //       child: Row(
