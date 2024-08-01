@@ -60,113 +60,115 @@ class _QuestionScreenState extends State<QuestionScreen> {
         ),
         backgroundColor: const Color(0xFF86948F),
       ),
-      body: Column(
-        children: [
-          const Center(
-            child: CustomImage(),
-          ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Container(
-              width: 350,
-              height: 410,
-              color: const Color(0xFFB8E893),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(right: 8.0, top: 6),
-                              child: Text(
-                                "${QB.idx + 1}/$length",
-                                style: const TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w900,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const Center(
+              child: CustomImage(),
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Container(
+                width: 350,
+                height: 410,
+                color: const Color(0xFFB8E893),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(right: 8.0, top: 6),
+                                child: Text(
+                                  "${QB.idx + 1}/$length",
+                                  style: const TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                  textAlign: TextAlign.right,
                                 ),
-                                textAlign: TextAlign.right,
+                              ),
+                            ],
+                          ),
+                          CustomText(
+                            text: currentQuestion.questionText,
+                            fontSize: 40,
+                            fontWeight: FontWeight.w900,
+                          ), // Use widget.question directly
+                        ],
+                      ),
+                    ),
+                    for (var index in currentQuestion.answers[0].entries)
+                      if (index.key != 'answer')
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 6.0, bottom: 6, right: 10, left: 10),
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: answer == index.key
+                                  ? const Color(0xff50997F)
+                                  : Colors.white,
+                            ),
+                            child: ListTile(
+                              title: CustomText(
+                                text: '${index.key}) ${index.value}',
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                                color: answer == index.key
+                                    ? Colors.white
+                                    : Colors.black,
+                              ),
+                              onTap: () {
+                                checkAnswer(index.key);
+                              },
+                            ),
+                          ),
+                        ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: SizedBox(
+                        height: 40,
+                        width: 150,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            backgroundColor: const Color(0xff86948F),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              side: const BorderSide(
+                                color: Color(0xffB8E893),
+                                width: 1,
                               ),
                             ),
-                          ],
-                        ),
-                        CustomText(
-                          text: currentQuestion.questionText,
-                          fontSize: 40,
-                          fontWeight: FontWeight.w900,
-                        ), // Use widget.question directly
-                      ],
-                    ),
-                  ),
-                  for (var index in currentQuestion.answers[0].entries)
-                    if (index.key != 'answer')
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            top: 6.0, bottom: 6, right: 10, left: 10),
-                        child: Container(
-                          height: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: answer == index.key
-                                ? const Color(0xff50997F)
-                                : Colors.white,
                           ),
-                          child: ListTile(
-                            title: CustomText(
-                              text: '${index.key}) ${index.value}',
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              color: answer == index.key
-                                  ? Colors.white
-                                  : Colors.black,
-                            ),
-                            onTap: () {
-                              checkAnswer(index.key);
-                            },
+                          onPressed: () {
+                            nextQuestion();
+                          },
+                          child: CustomText(
+                            text: questionBank.isEnd ? 'Show Result' : 'Next',
+                            fontSize: 20,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: SizedBox(
-                      height: 40,
-                      width: 150,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          foregroundColor: Colors.white,
-                          backgroundColor: const Color(0xff86948F),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            side: const BorderSide(
-                              color: Color(0xffB8E893),
-                              width: 1,
-                            ),
-                          ),
-                        ),
-                        onPressed: () {
-                          nextQuestion();
-                        },
-                        child: CustomText(
-                          text: questionBank.isEnd ? 'Show Result' : 'Next',
-                          fontSize: 20,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
                     ),
-                  ),
-                  const SizedBox(height: 20),
-                ],
+                    const SizedBox(height: 20),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
