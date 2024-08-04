@@ -2,6 +2,7 @@ import 'package:fickle_flight/components/custom_text.dart';
 import 'package:fickle_flight/components/plane_path.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class PlaneJourney extends StatelessWidget {
   PlaneJourney(
       {super.key,

@@ -280,19 +280,21 @@ class _ExploreState extends State<Explore> {
                   child: Row(
                     children: [
                       CustomCredit(
-                          img: Image.asset(
-                            'assets/offers/MasterCard.png',
-                            width: 120,
-                          ),
-                          title: '20% discount for mastercard users',
-                          subtitle: 'Limited time offer!'),
+                        img: Image.asset(
+                          'assets/offers/MasterCard.png',
+                          width: 120,
+                        ),
+                        title: '20% discount for mastercard users',
+                        subtitle: 'Limited time offer!',
+                      ),
                       CustomCredit(
-                          img: Image.asset(
-                            'assets/offers/Visa.png',
-                            width: 120,
-                          ),
-                          title: '25% discount with your Visa credit cards',
-                          subtitle: 'Limited time offer!'),
+                        img: Image.asset(
+                          'assets/offers/Visa.png',
+                          width: 120,
+                        ),
+                        title: '25% discount with your Visa credit cards',
+                        subtitle: 'Limited time offer!',
+                      ),
                     ],
                   ),
                 )

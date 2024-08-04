@@ -1,4 +1,5 @@
 import 'package:fickle_flight/screens/booking_screen.dart';
+import 'package:fickle_flight/screens/offers_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fickle_flight/screens/explore_screen.dart';
@@ -85,6 +86,10 @@ class _MyHomePageState extends State<MyHomePage>
           ],
         ),
         bottomNavigationBar: TabBar(
+          labelStyle: const TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
+          ),
           labelColor: const Color(0xff1262AE),
           indicatorColor: const Color(0xff1262AE),
           controller: _tabController,
@@ -95,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage>
             ),
             Tab(
               icon: Icon(Icons.location_on_outlined),
-              text: 'Booking',
+              text: 'Bookings',
             ),
             Tab(
               icon: Icon(CupertinoIcons.airplane),
@@ -123,17 +128,6 @@ class Search extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text('Search'),
-    );
-  }
-}
-
-class Offers extends StatelessWidget {
-  const Offers({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Offers'),
     );
   }
 }
