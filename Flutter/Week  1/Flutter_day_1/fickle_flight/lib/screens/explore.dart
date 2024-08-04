@@ -210,6 +210,19 @@ class Explore extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: Text(
+                'Offers',
+                style: GoogleFonts.inter(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xFF191919),
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
