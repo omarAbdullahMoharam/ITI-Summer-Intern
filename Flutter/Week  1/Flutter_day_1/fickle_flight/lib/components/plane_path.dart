@@ -2,8 +2,8 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PlanPath extends StatelessWidget {
-  const PlanPath({super.key});
+class PlanePath extends StatelessWidget {
+  const PlanePath({super.key});
 
   @override
   Widget build(BuildContext context) {

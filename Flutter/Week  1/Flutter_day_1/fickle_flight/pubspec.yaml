@@ -65,7 +65,7 @@ flutter:
     - assets/appBar.png
     - assets/resources/paris.png
     - assets/resources/
-    - assets/resources/
+    - assets/
     - assets/offers/
     # - assets/TabBar
   #   - images/a_dot_ham.jpeg

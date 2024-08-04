@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomCredit extends StatelessWidget {
   CustomCredit(
       {super.key,
@@ -14,26 +15,25 @@ class CustomCredit extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
       ),
-      elevation: 10,
+      elevation: 6,
       color: Colors.white,
       child: Container(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.only(
+          left: 4,
+        ),
         child: Row(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(right: 8),
-              child: img,
-            ),
+            img,
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 10),
-                  width: 210,
+                  width: 175,
                   child: Text(
                     title,
                     style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
