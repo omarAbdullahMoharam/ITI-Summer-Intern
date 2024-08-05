@@ -297,7 +297,8 @@ class _ExploreState extends State<Explore> {
                       ),
                     ],
                   ),
-                )
+                ),
+                const SizedBox(height: 15),
               ],
             ),
           ),

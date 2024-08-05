@@ -1,6 +1,7 @@
 import 'package:fickle_flight/screens/booking_screen.dart';
 import 'package:fickle_flight/screens/offers_screen.dart';
 import 'package:fickle_flight/screens/profile_screen.dart';
+import 'package:fickle_flight/screens/search_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fickle_flight/screens/explore_screen.dart';
@@ -118,17 +119,6 @@ class _MyHomePageState extends State<MyHomePage>
           ],
         ),
       ),
-    );
-  }
-}
-
-class Search extends StatelessWidget {
-  const Search({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Search'),
     );
   }
 }
