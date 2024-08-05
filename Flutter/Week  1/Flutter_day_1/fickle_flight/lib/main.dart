@@ -1,5 +1,6 @@
 import 'package:fickle_flight/screens/booking_screen.dart';
 import 'package:fickle_flight/screens/offers_screen.dart';
+import 'package:fickle_flight/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fickle_flight/screens/explore_screen.dart';
@@ -128,17 +129,6 @@ class Search extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text('Search'),
-    );
-  }
-}
-
-class Profile extends StatelessWidget {
-  const Profile({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Profile'),
     );
   }
 }

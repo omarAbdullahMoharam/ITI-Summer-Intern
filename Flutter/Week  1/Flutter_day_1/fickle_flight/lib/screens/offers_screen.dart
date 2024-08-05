@@ -12,13 +12,10 @@ class Offers extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            // Navigator.pop(context);
-          },
+          onPressed: () {},
         ),
       ),
       body: Card(
-        // color: const Color.fromARGB(255, 254, 82, 82),
         child: Column(
           children: [
             CustomOffer(
