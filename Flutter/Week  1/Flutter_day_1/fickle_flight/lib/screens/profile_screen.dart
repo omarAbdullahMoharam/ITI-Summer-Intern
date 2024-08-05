@@ -186,14 +186,21 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(50),
-                    child: CircleAvatar(
-                      radius: 50,
-                      // backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
-                      child: ClipRRect(
-                        child: Image.asset(
-                          'assets/Just_a_Girl.png',
-                          width: 110,
-                          height: 110,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                        color: Colors.white,
+                        width: 0,
+                      )),
+                      child: CircleAvatar(
+                        radius: 50,
+                        backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+                        child: ClipRRect(
+                          child: Image.asset(
+                            'assets/Just_a_Girl.png',
+                            width: 101,
+                            height: 101,
+                          ),
                         ),
                       ),
                     ),
