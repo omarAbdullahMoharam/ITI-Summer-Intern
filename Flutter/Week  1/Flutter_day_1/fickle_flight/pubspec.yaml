@@ -67,6 +67,9 @@ flutter:
     - assets/resources/
     - assets/
     - assets/offers/
+    - assets/boracay/
+    # - assets/resources/borocay_screen.jpg
+    
     # - assets/TabBar
   #   - images/a_dot_ham.jpeg
 

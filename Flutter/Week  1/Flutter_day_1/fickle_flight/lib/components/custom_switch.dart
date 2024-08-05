@@ -3,13 +3,21 @@ import 'package:flutter/material.dart';
 
 class CustomSwitch extends StatelessWidget {
   const CustomSwitch(
-      {super.key, this.fontColor, required this.title, this.backgroundColor});
+      {super.key,
+      this.fontColor,
+      required this.title,
+      this.backgroundColor,
+      required this.value});
   final Color? fontColor;
   final Color? backgroundColor;
   final String title;
+  final bool? value;
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: value!
+          ? const EdgeInsets.only(left: 10)
+          : const EdgeInsets.only(right: 0),
       width: 170,
       height: 50,
       decoration: BoxDecoration(
