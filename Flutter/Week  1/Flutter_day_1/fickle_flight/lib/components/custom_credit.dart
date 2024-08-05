@@ -20,6 +20,7 @@ class CustomCredit extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(
           left: 4,
+          bottom: 5,
         ),
         child: Row(
           children: [

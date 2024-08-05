@@ -1,3 +1,4 @@
+import 'package:fickle_flight/components/custom_button.dart';
 import 'package:fickle_flight/components/plane_journey.dart';
 import 'package:fickle_flight/screens/explore_screen.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,6 @@ class Booking extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              // const SizedBox(height: 10),
               const Padding(
                 padding: EdgeInsets.only(left: 8.0),
                 child: ClipRRect(
@@ -169,27 +169,7 @@ class Booking extends StatelessWidget {
                     const SizedBox(
                       height: 25,
                     ),
-                    Center(
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFF99A0E),
-                          shape: const RoundedRectangleBorder(
-                            side: BorderSide(color: Color(0xFFF99A0E)),
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                          ),
-                          minimumSize: const Size(300, 50),
-                        ),
-                        child: const Text(
-                          'Edit Booking',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xFFFFFFFF),
-                          ),
-                        ),
-                      ),
-                    ),
+                    const CustomButton(title: 'Edit Booking'),
                   ],
                 ),
               ),
