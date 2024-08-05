@@ -2,6 +2,7 @@ import 'package:fickle_flight/components/custom_card.dart';
 import 'package:fickle_flight/components/custom_credit.dart';
 import 'package:fickle_flight/components/custom_icon.dart';
 import 'package:fickle_flight/components/plane_journey.dart';
+import 'package:fickle_flight/trips/boracay_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -234,11 +235,21 @@ class _ExploreState extends State<Explore> {
                     padding: const EdgeInsets.symmetric(vertical: 8.0),
                     child: Row(
                       children: [
-                        CustomCard(
-                            img: Image.asset('assets/resources/Boracay.png'),
-                            title: 'Boracay',
-                            subtitle: 'Philippines',
-                            duration: '5D4N'),
+                        GestureDetector(
+                          child: CustomCard(
+                              img: Image.asset('assets/resources/Boracay.png'),
+                              title: 'Boracay',
+                              subtitle: 'Philippines',
+                              duration: '5D4N'),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const BoracayScreen(),
+                              ),
+                            );
+                          },
+                        ),
                         CustomCard(
                           img: Image.asset('assets/resources/Baros.png'),
                           title: 'Baros',
