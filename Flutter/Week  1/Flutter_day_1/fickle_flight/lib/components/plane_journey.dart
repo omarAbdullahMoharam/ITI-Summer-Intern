@@ -40,8 +40,7 @@ class PlaneJourney extends StatelessWidget {
                   bottomLeft: Radius.circular(8),
                   bottomRight: Radius.circular(8),
                 )
-              : const BorderRadius.all(
-                  Radius.circular(8)), //BorderRadius.circular(8),
+              : const BorderRadius.all(Radius.circular(8)),
           shape: BoxShape.rectangle,
         ),
         child: Column(
