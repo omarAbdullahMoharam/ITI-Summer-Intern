@@ -1,4 +1,6 @@
+import 'package:fickle_flight/components/custom_appbar.dart';
 import 'package:fickle_flight/components/custom_button.dart';
+import 'package:fickle_flight/screens/explore_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,15 +10,23 @@ class BoracayScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Image.asset('assets/resources/borocay_screen.jpg'),
+      body: CustomAppBar(
+        imagePath: 'assets/resources/borocay_screen.jpg',
+        icon: Icons.favorite_outline_sharp,
+        top: 20,
+        right: 5,
+        left: 5,
+        bottom: 0,
+        iconPressed: Icons.favorite_sharp,
+        navDistenation: const Explore(),
+      ),
       bottomSheet: SizedBox(
         height: 500,
         width: double.infinity,
         child: Card(
           margin:
-              const EdgeInsets.only(top: 10, bottom: 2, left: 15, right: 20),
+              const EdgeInsets.only(top: 10, bottom: 0, left: 15, right: 25),
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(

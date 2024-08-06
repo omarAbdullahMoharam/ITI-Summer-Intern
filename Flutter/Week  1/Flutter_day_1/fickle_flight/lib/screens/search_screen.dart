@@ -1,5 +1,6 @@
 import 'package:fickle_flight/components/custom_button.dart';
 import 'package:fickle_flight/components/custom_switch.dart';
+import 'package:fickle_flight/screens/booking_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,14 @@ class _SearchState extends State<Search> {
                 size: 35,
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Booking(),
+                ),
+              );
+            },
           ),
           actions: [
             IconButton(
@@ -163,39 +171,3 @@ class _SearchState extends State<Search> {
     );
   }
 }
-
-
-
-
-//  Container(
-//                 height: 70,
-//                 width: 260,
-//                 decoration: BoxDecoration(
-//                   borderRadius: BorderRadius.circular(35),
-//                   color: const Color(0xFFF3F5F9),
-//                 ),
-//                 child: const Row( 
-//                   children: [
-//                     SizedBox(
-//                       width: 20,
-//                     ),
-//                     Icon(CupertinoIcons.search),
-//                     SizedBox(
-//                       width: 10,
-//                     ),
-//                     SizedBox(
-//                       width: 150,
-//                       height: 50,
-//                       child: TextField(
-//                         decoration: InputDecoration(
-//                           hintText: 'Search',
-//                           hintStyle: TextStyle(color: Colors.grey),
-//                         ),
-//                       ),
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//               const SizedBox(
-//                 height: 20,
-//               ),

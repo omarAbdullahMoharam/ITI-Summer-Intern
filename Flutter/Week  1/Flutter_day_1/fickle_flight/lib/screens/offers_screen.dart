@@ -1,4 +1,5 @@
 import 'package:fickle_flight/components/cutom_offer.dart';
+import 'package:fickle_flight/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 
 class Offers extends StatelessWidget {
@@ -12,7 +13,14 @@ class Offers extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const Search(),
+              ),
+            );
+          },
         ),
       ),
       body: Card(
