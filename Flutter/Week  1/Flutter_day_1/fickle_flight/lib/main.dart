@@ -85,9 +85,19 @@ class _MyHomePageState extends State<MyHomePage>
                   width: 230,
                 ),
                 const Spacer(),
-                CircleAvatar(
-                  radius: 18,
-                  child: Image.asset('assets/CircleAvatar.png'),
+                GestureDetector(
+                  child: CircleAvatar(
+                    radius: 18,
+                    child: Image.asset('assets/CircleAvatar.png'),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const Profile(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),

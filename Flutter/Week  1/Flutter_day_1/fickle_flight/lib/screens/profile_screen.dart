@@ -1,6 +1,6 @@
 import 'package:fickle_flight/components/custom_appbar.dart';
 import 'package:fickle_flight/components/custom_listtile.dart';
-import 'package:fickle_flight/screens/offers_screen.dart';
+import 'package:fickle_flight/screens/explore_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +18,7 @@ class Profile extends StatelessWidget {
         right: 8,
         left: 8,
         bottom: 0,
-        navDistenation: const Offers(),
+        navDistenation: const Explore(),
       ),
       bottomSheet: Stack(
         children: [
