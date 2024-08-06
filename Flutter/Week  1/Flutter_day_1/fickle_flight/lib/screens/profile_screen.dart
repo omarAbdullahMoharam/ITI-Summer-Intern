@@ -1,4 +1,6 @@
+import 'package:fickle_flight/components/custom_appbar.dart';
 import 'package:fickle_flight/components/custom_listtile.dart';
+import 'package:fickle_flight/screens/offers_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,16 +11,14 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset(
-              'assets/resources/beach.jpg',
-              fit: BoxFit.fitHeight,
-            ),
-          ],
-        ),
+      body: CustomAppBar(
+        imagePath: 'assets/resources/beach.jpg',
+        icon: Icons.edit,
+        top: 5,
+        right: 8,
+        left: 8,
+        bottom: 0,
+        navDistenation: const Offers(),
       ),
       bottomSheet: Stack(
         children: [
@@ -69,9 +69,6 @@ class Profile extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // const SizedBox(
-                  //   height: 10,
-                  // ),
                   const Divider(
                     thickness: 0.25,
                     color: Color(0xFF191919),
@@ -105,8 +102,8 @@ class Profile extends StatelessWidget {
                           Text(
                             'Referral Code',
                             style: GoogleFonts.inter(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
                               color: const Color(0xFF191919),
                             ),
                           ),
