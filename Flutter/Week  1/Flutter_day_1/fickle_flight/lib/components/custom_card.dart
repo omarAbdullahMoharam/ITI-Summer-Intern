@@ -59,20 +59,6 @@ class CustomCard extends StatelessWidget {
                 ),
               ],
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //   children: [
-            //     Text(
-            //       duration,
-            //       style: GoogleFonts.inter(
-            //         fontSize: 14,
-            //         fontWeight: FontWeight.w400,
-            //         color: const Color(0xFF4D5760),
-            //       ),
-            //     ),
-            //     // Add any additional content here
-            //   ],
-            // ),
           ],
         ),
       ),
