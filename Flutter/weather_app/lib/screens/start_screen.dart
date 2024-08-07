@@ -10,8 +10,8 @@ class StartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: CustomGradient(),
       body: CustomGradient(
+        bottomSheet: false,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
