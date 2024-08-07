@@ -9,7 +9,7 @@ class CustomImage extends StatelessWidget {
       'assets/images/components/WeatherLogo.png',
       alignment: Alignment.center,
       width: 293,
-      height: 210,
+      height: 170,
     );
   }
 }
