@@ -1,2 +1,82 @@
+# Flutter/Dart/Pub specific
 .dart_tool/
-build
+.packages
+.pub-cache/
+.pub/
+/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins-dependencies.lock
+.flutter-versions
+# Generated files
+**/GeneratedPluginRegistrant.*
+**/ServiceWorkerDatabase.db
+**/ServiceWorkerStorage
+
+# iOS builds
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceWorkerDatabase.db
+ios/ServiceWorkerStorage
+
+# Android builds
+android/.gradle/
+android/app/build/
+android/app/app.iml
+
+# Web build
+web/ServiceWorkerDatabase.db
+web/ServiceWorkerStorage
+
+# Windows builds
+windows/flutter/ephemeral/
+windows/flutter/GeneratedPluginRegistrant.*
+windows/flutter/bin/
+
+# macOS builds
+macos/Flutter/ephemeral/
+macos/Flutter/GeneratedPluginRegistrant.*
+
+# Generated files
+**/GeneratedPluginRegistrant.*
+**/ServiceWorkerDatabase.db
+**/ServiceWorkerStorage
+
+# iOS builds
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceWorkerDatabase.db
+ios/ServiceWorkerStorage
+
+# Android builds
+android/.gradle/
+android/app/build/
+android/app/app.iml
+
+# Web build
+web/ServiceWorkerDatabase.db
+web/ServiceWorkerStorage
+
+# Windows builds
+windows/flutter/ephemeral/
+windows/flutter/GeneratedPluginRegistrant.*
+windows/flutter/bin/
+
+# macOS builds
+macos/Flutter/ephemeral/
+macos/Flutter/GeneratedPluginRegistrant.*
+
+# IntelliJ/Android Studio/VS Code settings
+.idea/
+*.iml
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Flutter environment and security files
+.env
+*.key
+*.crt
+.keystore
+
