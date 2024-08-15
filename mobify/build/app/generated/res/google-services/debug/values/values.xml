@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">1069253910800</string>
+    <string name="google_api_key" translatable="false">AIzaSyD2EpmCHeJKjOE6qEFXKMh2qta5aBZFCw4</string>
+    <string name="google_app_id" translatable="false">1:1069253910800:android:e48707be72dbbc9db18595</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD2EpmCHeJKjOE6qEFXKMh2qta5aBZFCw4</string>
+    <string name="google_storage_bucket" translatable="false">trainingcourse-b7172.appspot.com</string>
+    <string name="project_id" translatable="false">trainingcourse-b7172</string>
+</resources>
