@@ -12,6 +12,8 @@ import 'package:mobile_app/dashboard/modules/users/view/page/Product_page.dart';
 import 'package:mobile_app/utils/colors/colors_constant.dart';
 import 'package:badges/badges.dart' as badges;
 
+import '../modules/Cart/View/constantCart.dart';
+
 class DashboardPage extends StatelessWidget {
   final List<String> titles = [
     'home_page_tittle'.tr,
@@ -70,7 +72,7 @@ class DashboardPage extends StatelessWidget {
                       ),
                       badges.Badge(
                         badgeContent: Text(
-                          '5',
+                          '${my_cart.length}',
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

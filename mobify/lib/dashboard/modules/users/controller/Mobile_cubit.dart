@@ -17,6 +17,12 @@ class ProductCubit extends Cubit<ProductState> {
     return instance;
   }
 
+  // Future<void> fetchProducts() async {
+  //   emit(ProductStateLoading());
+  //   products = await dbRepo.fetchProducts();
+  //   emit(ProductStateLoaded(products: products));
+  // }
+
   Future<void> init() async {
     emit(ProductStateLoading());
     await dbRepo.initDB();
@@ -38,6 +44,7 @@ class ProductCubit extends Cubit<ProductState> {
       screenSize: 6.0,
       discount: 0,
     );
+
     await dbRepo.insertProduct(
       storageCapacity: 64,
       price: 165000,

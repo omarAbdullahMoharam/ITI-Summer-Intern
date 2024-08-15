@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:mobile_app/core/utils/context_extention.dart';
+import 'package:flutter/material.dart';
 import 'package:mobile_app/dashboard/modules/Home/view/component/search.dart';
 import 'package:mobile_app/utils/colors/colors_constant.dart';
 import 'package:mobile_app/utils/colors/custom_text.dart';
@@ -82,12 +81,17 @@ class HomeScreen extends StatelessWidget {
         viewportFraction: 1.0,
       ),
       items: imgList
-          .map((item) => Container(
+          .map((item) => Card(
+                color: Colors.white,
+                // margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Center(
-                  child: Image.asset(
-                    item,
-                    fit: BoxFit.contain,
-                    width: 1000,
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    child: Image.asset(
+                      item,
+                      fit: BoxFit.contain,
+                      width: 1000,
+                    ),
                   ),
                 ),
               ))

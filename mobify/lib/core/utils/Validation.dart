@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 
 class Validation {
   String? validateEmail(String? email) {
+    // ignore: unused_local_variable
     TextInputFormatter emailInputFormatter = FilteringTextInputFormatter.allow(
       RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$'),
     );

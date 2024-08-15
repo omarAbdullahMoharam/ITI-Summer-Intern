@@ -45,6 +45,7 @@ class CartCubit extends Cubit<CartState> {
     prefs.setDouble('total_price', state.totalPrice);
   }
 
+  // ignore: unused_element
   void _getPrefsItems() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     int counter = prefs.getInt('cart_items') ?? 0;

@@ -21,6 +21,7 @@ void main() async {
           darkTheme: MyTheme.Instance.dark,
           themeMode: ParentCubit.instance.themeMode,
           builder: DevicePreview.appBuilder,
+          // ignore: deprecated_member_use
           useInheritedMediaQuery: true,
           debugShowCheckedModeBanner: false,
           onGenerateRoute: MyRoutes.onGenerateRoute,

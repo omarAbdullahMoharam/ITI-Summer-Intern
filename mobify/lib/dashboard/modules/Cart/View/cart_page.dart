@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mobile_app/core/cubit/parent_cubit.dart';
@@ -6,6 +7,7 @@ import 'package:mobile_app/dashboard/modules/Cart/Controller/cart_state.dart';
 import 'package:mobile_app/dashboard/modules/Cart/Model/cart_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_app/dashboard/modules/Cart/View/constantCart.dart';
+import 'package:mobile_app/dashboard/modules/Fav/View/fav_page.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -80,23 +82,31 @@ class CartScreen extends StatelessWidget {
               itemCount: my_cart.length,
               itemBuilder: (context, index) {
                 return Card(
-                  color: Colors.blueGrey.shade200,
+                  color: Colors.white,
                   elevation: 5.0,
                   child: Padding(
                     padding: const EdgeInsets.all(0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Image.asset(
-                          my_cart[index].image.toString(),
-                          height: 150,
-                          width: 80,
+                        Container(
+                          margin: const EdgeInsets.all(10.0),
+                          child: Image.asset(
+                            fit: BoxFit.fitWidth,
+                            my_cart[index].image.toString(),
+                            height: 120,
+                            width: 80,
+                          ),
                         ),
-                        const SizedBox(width: 8.0),
-                        Expanded(
+                        // const SizedBox(width: 8.0),
+                        SizedBox(
+                          // width: 120,
+                          height: 100,
                           child: Column(
+                            // mainAxisSize: ,
                             crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               RichText(
                                 overflow: TextOverflow.ellipsis,
@@ -112,34 +122,79 @@ class CartScreen extends StatelessWidget {
                                     TextSpan(
                                       text: '${my_cart[index].brand}\n',
                                       style: const TextStyle(
+                                        color: Colors.black,
                                         fontWeight: FontWeight.bold,
+                                        fontSize: 18.0,
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
+
                               RichText(
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 1,
                                 text: TextSpan(
-                                  text: 'Price: ' r"$",
+                                  text: '${my_cart[index].model}\n',
                                   style: TextStyle(
-                                    color: Colors.blueGrey.shade800,
+                                    color: Colors.grey.shade800,
                                     fontSize: 16.0,
+                                  ),
+                                ),
+                              ),
+
+                              RichText(
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                                text: TextSpan(
+                                  text: r"$",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                   children: [
                                     TextSpan(
                                       text: '${my_cart[index].price}\n',
                                       style: const TextStyle(
                                         fontWeight: FontWeight.bold,
+                                        fontSize: 18.0,
+                                        color: Colors.black,
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
+                              // const SizedBox(height: 8.0),
+                              // Row(
+                              //   children: [
+                              //     SizedBox(
+                              //       width: 100,
+                              //       child: ListTile(
+                              //         title: Text(
+                              //           '${my_cart[index].quantity}',
+                              //           style: const TextStyle(
+                              //             color: Colors.blueGrey,
+                              //             fontSize: 16.0,
+                              //           ),
+                              //         ),
+                              //         subtitle: Text(
+                              //           '${my_cart[index].price! * my_cart[index].quantity!}',
+                              //           style: const TextStyle(
+                              //             color: Colors.blueGrey,
+                              //             fontSize: 16.0,
+                              //           ),
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ],
+                              // )
                             ],
                           ),
                         ),
+                        // const SizedBox(width: 8.0),
+                        Spacer(),
+
                         BlocListener<CartCubit, CartState>(
                           listener: (context, state) {},
                           child: Builder(
@@ -177,29 +232,6 @@ class CartScreen extends StatelessWidget {
               },
             );
     }
-  }
-}
-
-class PlusMinusButtons extends StatelessWidget {
-  final VoidCallback deleteQuantity;
-  final VoidCallback addQuantity;
-  final String text;
-  const PlusMinusButtons({
-    Key? key,
-    required this.addQuantity,
-    required this.deleteQuantity,
-    required this.text,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(onPressed: deleteQuantity, icon: const Icon(Icons.remove)),
-        Text(text),
-        IconButton(onPressed: addQuantity, icon: const Icon(Icons.add)),
-      ],
-    );
   }
 }
 
