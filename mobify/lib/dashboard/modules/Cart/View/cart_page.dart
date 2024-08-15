@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mobile_app/core/cubit/parent_cubit.dart';
@@ -195,9 +196,26 @@ class PlusMinusButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        IconButton(onPressed: deleteQuantity, icon: const Icon(Icons.remove)),
-        Text(text),
-        IconButton(onPressed: addQuantity, icon: const Icon(Icons.add)),
+        IconButton(
+          onPressed: deleteQuantity,
+          icon: const Icon(
+            CupertinoIcons.minus_circle,
+            size: 25,
+            color: Colors.black,
+          ),
+        ),
+        Text(
+          text,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
+        IconButton(
+          onPressed: addQuantity,
+          icon: Icon(
+            CupertinoIcons.plus_circle,
+            color: Colors.black,
+            size: 25,
+          ),
+        ),
       ],
     );
   }

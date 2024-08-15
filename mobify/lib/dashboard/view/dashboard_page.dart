@@ -4,7 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_app/core/cubit/parent_cubit.dart';
 import 'package:mobile_app/core/utils/context_extention.dart';
 import 'package:mobile_app/dashboard/controller/cubit/dashboard_cubit.dart';
+import 'package:mobile_app/dashboard/modules/Cart/Controller/cart_cubit.dart';
+import 'package:mobile_app/dashboard/modules/Cart/Model/cart_model.dart';
 import 'package:mobile_app/dashboard/modules/Cart/View/cart_page.dart';
+import 'package:mobile_app/dashboard/modules/Cart/View/constantCart.dart';
 import 'package:mobile_app/dashboard/modules/Fav/View/fav_page.dart';
 import 'package:mobile_app/dashboard/modules/Home/view/home_page.dart';
 import 'package:mobile_app/dashboard/modules/profile/profile_screen.dart';
@@ -70,7 +73,7 @@ class DashboardPage extends StatelessWidget {
                       ),
                       badges.Badge(
                         badgeContent: Text(
-                          '5',
+                          my_cart.length.toString(),
                           style: const TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
