@@ -51,3 +51,8 @@ macos/Flutter/GeneratedPluginRegistrant.*
 *.key
 *.crt
 .keystore
+
+# Ignore APKs and build files
+*.apk
+*.dill
+mobify/build/
