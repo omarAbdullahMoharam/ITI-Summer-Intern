@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mobile_app-mergeDebugResources-29:/values-v31/values-v31.xml",
+            "outputFile": "com.example.mobile_app-mergeDebugResources-35:/values-v31/values-v31.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Omar Abdullah\\Desktop\\ITI-Summer-Intern\\mobify\\android\\app\\src\\main\\res\\values-v31\\styles.xml",
+                    "source": "C:\\Users\\omarm\\Desktop\\ITI-Summer-Intern\\mobify\\android\\app\\src\\main\\res\\values-v31\\styles.xml",
                     "from": {
                         "startLines": "3,18",
                         "startColumns": "4,4",

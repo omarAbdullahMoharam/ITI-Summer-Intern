@@ -6,10 +6,10 @@ class DatabaseRepo {
   DatabaseRepo? instance;
   Future<Database> initDB() async {
     try {
-      String path = (await getDatabasesPath()) + "/products.db";
+      String path = (await getDatabasesPath()) + "/prod.db";
       database = await openDatabase(
         path,
-        version: 1,
+        version: 2,
         onCreate: (db, version) {
           return db.execute('''CREATE TABLE products(
               id INTEGER PRIMARY KEY AUTOINCREMENT, 
