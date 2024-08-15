@@ -302,6 +302,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "google_fonts",
+      "rootUri": "file:///C:/Users/omarm/AppData/Local/Pub/Cache/hosted/pub.dev/google_fonts-6.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "html",
       "rootUri": "file:///C:/Users/omarm/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.4",
       "packageUri": "lib/",
@@ -692,7 +698,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-08-15T11:52:06.112166Z",
+  "generated": "2024-08-15T14:49:15.467466Z",
   "generator": "pub",
   "generatorVersion": "3.5.0",
   "flutterRoot": "file:///C:/src/flutter",
