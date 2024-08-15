@@ -42,6 +42,7 @@ class ProductItemWidget extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         // Product information
                         Row(
@@ -66,30 +67,41 @@ class ProductItemWidget extends StatelessWidget {
                             const SizedBox(width: 10),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Text(
                                   productModel.brand ?? '',
                                   style: const TextStyle(
-                                    fontSize: 20,
+                                    fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.blue,
                                   ),
                                 ),
+                                const SizedBox(height: 8),
                                 Text(
                                   productModel.model ?? '',
-                                  style: const TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.grey,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.grey.shade900,
                                   ),
                                 ),
+                                const SizedBox(height: 5),
                                 Text(
-                                  productModel.price.toString(),
-                                  style: const TextStyle(
-                                    fontSize: 15,
+                                  productModel.color ?? '',
+                                  style: TextStyle(
+                                    fontSize: 16,
                                     fontWeight: FontWeight.w400,
-                                    color: Colors.grey,
+                                    color: Colors.grey.shade900,
+                                  ),
+                                ),
+                                const SizedBox(height: 5),
+                                Text(
+                                  '${productModel.price} EGP',
+                                  style: const TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.black,
                                   ),
                                 ),
                               ],
