@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:mobile_app/core/utils/context_extention.dart';
+import 'package:flutter/material.dart';
 import 'package:mobile_app/dashboard/modules/Home/view/component/search.dart';
 import 'package:mobile_app/utils/colors/colors_constant.dart';
 import 'package:mobile_app/utils/colors/custom_text.dart';
