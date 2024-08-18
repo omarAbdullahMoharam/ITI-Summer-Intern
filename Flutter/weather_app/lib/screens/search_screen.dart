@@ -37,9 +37,19 @@ class SearchScreen extends StatelessWidget {
                     SizedBox(
                       width: 289,
                       child: TextField(
+                        style: GoogleFonts.kadwa(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                         decoration: InputDecoration(
+                          focusedBorder: InputBorder.none,
+                          contentPadding: const EdgeInsets.only(
+                            left: 15,
+                          ),
                           hintText: ' Enter location ',
                           hintStyle: GoogleFonts.kadwa(
+                            fontWeight: FontWeight.w600,
                             fontSize: 16,
                             color: Colors.white,
                           ),
