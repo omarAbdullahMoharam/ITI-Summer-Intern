@@ -64,7 +64,8 @@ Lab: https://docs.flutter.dev/get-started/codelab
 
 CookBook: https://docs.flutter.dev/cookbook
 
-For additional guidance and API references, visit the Flutter online documentation ➡️ https://docs.flutter.dev/
+For additional guidance and API references, visit the Flutter online documentation 
+➡️ https://docs.flutter.dev/
 
 How to Run
 1. Clone the repository:
