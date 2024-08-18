@@ -37,7 +37,6 @@ class _LazyLoadingGridState extends State<LazyLoadingGrid> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _loadMore();
   }
