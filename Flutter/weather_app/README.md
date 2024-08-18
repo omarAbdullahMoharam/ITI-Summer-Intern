@@ -1,4 +1,5 @@
 Weather App 🌤️
+
 A Flutter project that provides up-to-date weather information with a clean and intuitive interface.
 
 Overview
@@ -60,6 +61,7 @@ Getting Started
 This project serves as a starting point for a Flutter application. Follow the resources below to dive into Flutter development:
 
 Lab: https://docs.flutter.dev/get-started/codelab
+
 CookBook: https://docs.flutter.dev/cookbook
 
 For additional guidance and API references, visit the Flutter online documentation ➡️ https://docs.flutter.dev/
