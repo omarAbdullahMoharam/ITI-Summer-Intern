@@ -1,0 +1,105 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub-cache/
+build/
+flutter_*.png
+
+# Specific to IntelliJ + Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Specific to VS Code
+.vscode/
+
+# Flutter specific files
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-version
+*.flutter-plugins
+*.flutter-plugins-dependencies
+
+# Generated files
+*.log
+pubspec.lock
+
+# Dependency directories
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/gradle/
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/gradle/
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/gradle/wrapper/
+android/build/
+ios/Pods/
+ios/Flutter/.last_build_id
+ios/Flutter/App.framework/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+ios/Flutter/Flutter.podspec.json
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ServiceDefinitions.json
+ios/Runner.xcodeproj/project.pbxproj
+ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Runner/FlutterEnginePluginRegistrant.*
+ios/Runner/Info.plist
+ios/Runner/ServiceDefinitions.json
+ios/Runner/Base.lproj/LaunchScreen.storyboard
+ios/Runner/Base.lproj/Main.storyboard
+ios/Runner/Assets.xcassets/LaunchImage.imageset/*
+ios/Runner/Assets.xcassets/LaunchScreen.storyboard
+ios/Runner/Base.lproj/Main.storyboard
+
+# iOS specific
+ios/Flutter/
+ios/Pods/
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Android specific
+android/.gradle/
+android/app/build/
+android/gradle/
+android/local.properties
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/gradle/wrapper/
+
+# macOS specific
+macos/Flutter/ephemeral/
+
+# Windows specific
+windows/flutter/ephemeral/
+
+# Linux specific
+linux/flutter/ephemeral/
+
+# Web related files
+web/.dart_tool/
+
+# Coverage
+coverage/
+
+# User-specific files
+*.swp
+*.swo
+*.tmp
+
+# Mobile-specific files
+*.apk
+*.ipa
