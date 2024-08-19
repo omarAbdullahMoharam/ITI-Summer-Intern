@@ -9,10 +9,6 @@
 .history
 .svn/
 migrate_working_dir/
-# Flutter build artifacts
-build/
-.dart_tool/
-
 
 # IntelliJ related
 *.iml
@@ -33,6 +29,7 @@ build/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
+
 /build/
 
 # Symbolication related
@@ -46,3 +43,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 /.dart_tool/
+
+

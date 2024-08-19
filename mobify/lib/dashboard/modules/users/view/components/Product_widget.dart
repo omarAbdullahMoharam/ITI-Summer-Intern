@@ -2,9 +2,9 @@ import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_app/dashboard/modules/Cart/Controller/cart_cubit.dart';
 import 'package:mobile_app/dashboard/modules/Cart/Controller/cart_state.dart';
+import 'package:mobile_app/dashboard/modules/Cart/View/cart_page.dart';
 import 'package:mobile_app/dashboard/modules/Cart/View/constantCart.dart';
 import 'package:mobile_app/dashboard/modules/users/controller/Mobile_cubit.dart';
 import 'package:mobile_app/dashboard/modules/users/model/Entity_model/Product_model.dart';
@@ -29,19 +29,20 @@ class ProductItemWidget extends StatelessWidget {
         builder: (context, cartState) {
           final cartCubit = context.read<CartCubit>();
 
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: DecoratedBox(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(color: Colors.grey, width: 0.5),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Stack(
-                children: [
-                  Padding(
+          return Stack(
+            children: [
+              Card(
+                // padding: const EdgeInsets.all(8.0),
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(color: Colors.grey, width: 0.5),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         // Product information
                         Row(
@@ -65,30 +66,40 @@ class ProductItemWidget extends StatelessWidget {
                               ),
                             const SizedBox(width: 10),
                             Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Text(
                                   productModel.brand ?? '',
                                   style: const TextStyle(
-                                    fontSize: 18,
+                                    fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.blue,
                                   ),
                                 ),
+                                const SizedBox(height: 8),
                                 Text(
                                   productModel.model ?? '',
                                   style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.grey.shade800,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.grey.shade900,
                                   ),
                                 ),
-                                SizedBox(height: 10),
+                                const SizedBox(height: 5),
                                 Text(
-                                  '${productModel.price.toString()} EGP',
-                                  style: GoogleFonts.kadwa(
-                                    fontSize: 18,
+                                  productModel.color ?? '',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.grey.shade900,
+                                  ),
+                                ),
+                                const SizedBox(height: 5),
+                                Text(
+                                  '${productModel.price} EGP',
+                                  style: const TextStyle(
+                                    fontSize: 20,
                                     fontWeight: FontWeight.w700,
                                     color: Colors.black,
                                   ),
@@ -98,15 +109,14 @@ class ProductItemWidget extends StatelessWidget {
                             const Spacer(),
                             Column(
                               children: [
-                                // Text(
-                                //   productModel.availabilityState?.toString() ??
-                                //       '',
-                                //   style: const TextStyle(
-                                //     fontSize: 18,
-                                //     fontWeight: FontWeight.w800,
-                                //     color: Colors.green,
-                                //   ),
-                                // ),
+                                const SizedBox(height: 10),
+                                PlusMinusButtons(
+                                  addQuantity: () {
+                                    ;
+                                  },
+                                  deleteQuantity: () {},
+                                  text: '1',
+                                ),
                               ],
                             ),
                           ],
@@ -167,32 +177,34 @@ class ProductItemWidget extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Positioned(
-                    right: 10,
-                    top: 10,
-                    child: Container(
-                      alignment: Alignment.center,
-                      margin: const EdgeInsets.only(top: 15),
-                      height: 28,
-                      width: 90,
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Text(
-                        // productModel.quantity?.toString() ?? '0',
-                        'in stock',
-                        style: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w900,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  )
-                ],
+                ),
               ),
-            ),
+              Positioned(
+                top: 30,
+                right: 20,
+                child: Container(
+                  alignment: Alignment.center,
+                  width: 110,
+                  height: 25,
+                  decoration: BoxDecoration(
+                    color: productModel.availabilityState == 1
+                        ? Colors.green
+                        : Colors.red,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Text(
+                    productModel.availabilityState == 1
+                        ? "In Stock"
+                        : "Out of Stock",
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           );
         },
       ),

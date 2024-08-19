@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_app/core/cubit/parent_cubit.dart';
 import 'package:mobile_app/dashboard/modules/Cart/Controller/cart_cubit.dart';
 import 'package:mobile_app/dashboard/modules/Cart/Controller/cart_state.dart';
 import 'package:mobile_app/dashboard/modules/Cart/Model/cart_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_app/dashboard/modules/Cart/View/constantCart.dart';
-import 'package:mobile_app/dashboard/modules/Fav/View/fav_page.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -82,156 +82,146 @@ class CartScreen extends StatelessWidget {
               itemCount: my_cart.length,
               itemBuilder: (context, index) {
                 return Card(
-                  color: Colors.white,
                   elevation: 5.0,
-                  child: Padding(
-                    padding: const EdgeInsets.all(0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      // crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.all(10.0),
-                          child: Image.asset(
-                            fit: BoxFit.fitWidth,
-                            my_cart[index].image.toString(),
-                            height: 120,
-                            width: 80,
-                          ),
+                  color: Colors.white,
+                  // padding: const EdgeInsets.all(0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.all(10.0),
+                        child: Image.asset(
+                          my_cart[index].image.toString(),
+                          height: 130,
+                          width: 100,
                         ),
-                        // const SizedBox(width: 8.0),
-                        SizedBox(
-                          // width: 120,
-                          height: 100,
+                      ),
+                      // const SizedBox(width: 8.0),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10.0),
                           child: Column(
-                            // mainAxisSize: ,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              RichText(
-                                overflow: TextOverflow.ellipsis,
+                              Text(
+                                '${my_cart[index].brand}\n',
                                 maxLines: 1,
-                                text: TextSpan(
-                                  style:
-                                      Theme.of(context).textTheme.bodyLarge ??
-                                          TextStyle(
-                                            color: Colors.blueGrey.shade800,
-                                            fontSize: 16.0,
-                                          ),
-                                  children: [
-                                    TextSpan(
-                                      text: '${my_cart[index].brand}\n',
-                                      style: const TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18.0,
-                                      ),
-                                    ),
-                                  ],
+                                overflow: TextOverflow.ellipsis,
+                                style: GoogleFonts.kadwa(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blue,
                                 ),
                               ),
-
-                              RichText(
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text(
+                                '${my_cart[index].model}\n',
+                                maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
-                                maxLines: 1,
-                                text: TextSpan(
-                                  text: '${my_cart[index].model}\n',
-                                  style: TextStyle(
-                                    color: Colors.grey.shade800,
-                                    fontSize: 16.0,
-                                  ),
+                                style: GoogleFonts.inter(
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.normal,
+                                  color: Colors.grey.shade900,
                                 ),
                               ),
-
-                              RichText(
+                              Text(
+                                '${my_cart[index].price} EGP',
                                 overflow: TextOverflow.ellipsis,
-                                maxLines: 1,
-                                text: TextSpan(
-                                  text: r"$",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  children: [
-                                    TextSpan(
-                                      text: '${my_cart[index].price}\n',
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18.0,
-                                        color: Colors.black,
-                                      ),
-                                    ),
-                                  ],
+                                maxLines: 2,
+                                style: GoogleFonts.kadwa(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
                                 ),
                               ),
-                              // const SizedBox(height: 8.0),
-                              // Row(
-                              //   children: [
-                              //     SizedBox(
-                              //       width: 100,
-                              //       child: ListTile(
-                              //         title: Text(
-                              //           '${my_cart[index].quantity}',
-                              //           style: const TextStyle(
-                              //             color: Colors.blueGrey,
-                              //             fontSize: 16.0,
-                              //           ),
-                              //         ),
-                              //         subtitle: Text(
-                              //           '${my_cart[index].price! * my_cart[index].quantity!}',
-                              //           style: const TextStyle(
-                              //             color: Colors.blueGrey,
-                              //             fontSize: 16.0,
-                              //           ),
-                              //         ),
-                              //       ),
-                              //     ),
-                              //   ],
-                              // )
                             ],
                           ),
                         ),
-                        // const SizedBox(width: 8.0),
-                        Spacer(),
-
-                        BlocListener<CartCubit, CartState>(
-                          listener: (context, state) {},
-                          child: Builder(
-                            builder: (context) {
-                              return PlusMinusButtons(
-                                addQuantity: () {
-                                  context
-                                      .read<CartCubit>()
-                                      .addQuantity(cart[index].id!);
-                                },
-                                deleteQuantity: () {
-                                  context
-                                      .read<CartCubit>()
-                                      .deleteQuantity(cart[index].id!);
-                                },
-                                text: cart[index].quantity.toString(),
-                              );
-                            },
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () {
-                            my_cart.remove(my_cart[index]);
-                            // context.read<CartCubit>().removeItem(my_cart[index].id!);
+                      ),
+                      BlocListener<CartCubit, CartState>(
+                        listener: (context, state) {},
+                        child: Builder(
+                          builder: (context) {
+                            return PlusMinusButtons(
+                              addQuantity: () {
+                                context
+                                    .read<CartCubit>()
+                                    .addQuantity(cart[index].id!);
+                              },
+                              deleteQuantity: () {
+                                context
+                                    .read<CartCubit>()
+                                    .deleteQuantity(cart[index].id!);
+                              },
+                              text: cart[index].quantity.toString(),
+                            );
                           },
-                          icon: Icon(
-                            Icons.delete,
-                            color: Color.fromARGB(255, 32, 77, 155),
-                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      IconButton(
+                        onPressed: () {
+                          my_cart.remove(my_cart[index]);
+                          // context.read<CartCubit>().removeItem(my_cart[index].id!);
+                        },
+                        icon: Icon(
+                          Icons.delete,
+                          color: Color.fromARGB(255, 32, 77, 155),
+                        ),
+                      ),
+                    ],
                   ),
                 );
               },
             );
     }
+  }
+}
+
+class PlusMinusButtons extends StatelessWidget {
+  final VoidCallback deleteQuantity;
+  final VoidCallback addQuantity;
+  final String text;
+  const PlusMinusButtons({
+    Key? key,
+    required this.addQuantity,
+    required this.deleteQuantity,
+    required this.text,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconButton(
+          onPressed: deleteQuantity,
+          icon: const Icon(
+            CupertinoIcons.minus_circle,
+            size: 25,
+            color: Colors.black,
+          ),
+        ),
+        Text(
+          text,
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        IconButton(
+          onPressed: addQuantity,
+          icon: Icon(
+            CupertinoIcons.plus_circle,
+            color: Colors.black,
+            size: 25,
+          ),
+        ),
+      ],
+    );
   }
 }
 

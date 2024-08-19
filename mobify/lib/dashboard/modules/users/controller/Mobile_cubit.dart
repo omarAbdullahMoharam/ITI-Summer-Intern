@@ -26,6 +26,15 @@ class ProductCubit extends Cubit<ProductState> {
   Future<void> init() async {
     emit(ProductStateLoading());
     await dbRepo.initDB();
+    products = await dbRepo.fetchProducts();
+
+    List<ProductModel> productsList = [];
+
+    // for (int i = 0; i < products.length; i++) {
+    //   if (products[i].availabilityState == 1) {
+    //     productsList.add(products[i]);
+    //   }
+    // }
 
     await dbRepo.insertProduct(
       storageCapacity: 256,
@@ -51,7 +60,7 @@ class ProductCubit extends Cubit<ProductState> {
       ramCapacity: 6,
       year: 2024,
       quantity: 1,
-      availabilityState: 1,
+      availabilityState: 0,
       brand: 'MacBook',
       model: 'Air M1 2020',
       color: 'Black',
@@ -136,7 +145,7 @@ class ProductCubit extends Cubit<ProductState> {
       ramCapacity: 6,
       year: 2024,
       quantity: 1,
-      availabilityState: 1,
+      availabilityState: 0,
       brand: 'Red Magic',
       model: 'Red Magic Gaming',
       color: 'Black',
