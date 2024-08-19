@@ -9,6 +9,7 @@
 .flutter-plugins-dependencies.lock
 .flutter-versions
 
+
 # Generated files
 **/GeneratedPluginRegistrant.*
 **/ServiceWorkerDatabase.db
@@ -56,3 +57,5 @@ macos/Flutter/GeneratedPluginRegistrant.*
 *.apk
 *.dill
 mobify/build/
+
+
