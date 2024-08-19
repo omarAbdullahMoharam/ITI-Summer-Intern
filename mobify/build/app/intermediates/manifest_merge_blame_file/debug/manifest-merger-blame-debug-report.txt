@@ -15,375 +15,367 @@
 15    <uses-permission android:name="android.permission.INTERNET" />
 15-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\debug\AndroidManifest.xml:6:5-66
 15-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\debug\AndroidManifest.xml:6:22-64
-16    <!--
-17     Required to query activities that can process text, see:
-18         https://developer.android.com/training/package-visibility and
-19         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+16    <!-- Required to query activities that can process text -->
+17    <queries>
+17-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:40:5-45:15
+18        <intent>
+18-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:41:9-44:18
+19            <action android:name="android.intent.action.PROCESS_TEXT" />
+19-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:42:13-72
+19-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:42:21-70
 20
-21         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
-22    -->
-23    <queries>
-23-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:39:5-44:15
-24        <intent>
-24-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:40:9-43:18
-25            <action android:name="android.intent.action.PROCESS_TEXT" />
-25-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:41:13-72
-25-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:41:21-70
+21            <data android:mimeType="text/plain" />
+21-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:43:13-50
+21-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:43:19-48
+22        </intent>
+23    </queries> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+24    <!-- <uses-sdk android:minSdkVersion="21" /> -->
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:10:5-79
+25-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:10:22-76
 26
-27            <data android:mimeType="text/plain" />
-27-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:42:13-50
-27-->C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\android\app\src\main\AndroidManifest.xml:42:19-48
-28        </intent>
-29    </queries> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-30    <!-- <uses-sdk android:minSdkVersion="21" /> -->
-31    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-31-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:10:5-79
-31-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:10:22-76
-32
-33    <permission
-33-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
-34        android:name="com.example.mobify.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-34-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
-35        android:protectionLevel="signature" />
-35-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
-36
-37    <uses-permission android:name="com.example.mobify.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-37-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
-37-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
-38
-39    <application
-40        android:name="android.app.Application"
-41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-41-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
-42        android:debuggable="true"
-43        android:icon="@mipmap/ic_launcher"
-44        android:label="mobify" >
-45        <activity
-46            android:name="com.example.mobify.MainActivity"
-47            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-48            android:exported="true"
-49            android:hardwareAccelerated="true"
-50            android:launchMode="singleTop"
-51            android:taskAffinity=""
-52            android:theme="@style/LaunchTheme"
-53            android:windowSoftInputMode="adjustResize" >
-54
-55            <!--
-56                 Specifies an Android theme to apply to this Activity as soon as
-57                 the Android process has started. This theme is visible to the user
-58                 while the Flutter UI initializes. After that, this theme continues
-59                 to determine the Window background behind the Flutter UI.
-60            -->
-61            <meta-data
-62                android:name="io.flutter.embedding.android.NormalTheme"
-63                android:resource="@style/NormalTheme" />
-64
-65            <intent-filter>
-66                <action android:name="android.intent.action.MAIN" />
-67
-68                <category android:name="android.intent.category.LAUNCHER" />
-69            </intent-filter>
-70        </activity>
-71        <!--
-72             Don't delete the meta-data below.
-73             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-74        -->
-75        <meta-data
-76            android:name="flutterEmbedding"
-77            android:value="2" />
-78
-79        <service
-79-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
-80            android:name="com.google.firebase.components.ComponentDiscoveryService"
-80-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
-81            android:directBootAware="true"
-81-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
-82            android:exported="false" >
-82-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:14:13-37
-83            <meta-data
-83-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-84                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-84-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
-85                android:value="com.google.firebase.components.ComponentRegistrar" />
-85-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-86            <meta-data
-86-->[:firebase_crashlytics] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-87                android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.FlutterFirebaseAppRegistrar"
-87-->[:firebase_crashlytics] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-130
-88                android:value="com.google.firebase.components.ComponentRegistrar" />
-88-->[:firebase_crashlytics] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-89            <meta-data
-89-->[:firebase_remote_config] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_remote_config\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-90                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firebaseremoteconfig.FlutterFirebaseAppRegistrar"
-90-->[:firebase_remote_config] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_remote_config\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-139
-91                android:value="com.google.firebase.components.ComponentRegistrar" />
-91-->[:firebase_remote_config] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_remote_config\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-92            <meta-data
-92-->[:firebase_core] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
-93                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-93-->[:firebase_core] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
-94                android:value="com.google.firebase.components.ComponentRegistrar" />
-94-->[:firebase_core] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
-95            <meta-data
-95-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:15:13-17:85
-96                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
-96-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:16:17-126
-97                android:value="com.google.firebase.components.ComponentRegistrar" />
-97-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:17:17-82
-98            <meta-data
-98-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:18:13-20:85
-99                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-99-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:19:17-115
-100                android:value="com.google.firebase.components.ComponentRegistrar" />
-100-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:20:17-82
-101            <meta-data
-101-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:17:13-19:85
-102                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
-102-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:18:17-122
-103                android:value="com.google.firebase.components.ComponentRegistrar" />
-103-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:19:17-82
-104            <meta-data
-104-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:20:13-22:85
-105                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-105-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:21:17-111
-106                android:value="com.google.firebase.components.ComponentRegistrar" />
-106-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:22:17-82
-107            <meta-data
-107-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:29:13-31:85
-108                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
-108-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:30:17-128
-109                android:value="com.google.firebase.components.ComponentRegistrar" />
-109-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:31:17-82
-110            <meta-data
-110-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:32:13-34:85
-111                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
-111-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:33:17-117
-112                android:value="com.google.firebase.components.ComponentRegistrar" />
-112-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:34:17-82
-113            <meta-data
-113-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:29:13-31:85
-114                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
-114-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:30:17-117
-115                android:value="com.google.firebase.components.ComponentRegistrar" />
-115-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:31:17-82
-116            <meta-data
-116-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
-117                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
-117-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
-118                android:value="com.google.firebase.components.ComponentRegistrar" />
-118-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
-119            <meta-data
-119-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
-120                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-120-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
-121                android:value="com.google.firebase.components.ComponentRegistrar" />
-121-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
-122            <meta-data
-122-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\8b848a1bea5784066baf3652a1559cd1\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
-123                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-123-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\8b848a1bea5784066baf3652a1559cd1\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
-124                android:value="com.google.firebase.components.ComponentRegistrar" />
-124-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\8b848a1bea5784066baf3652a1559cd1\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
-125            <meta-data
-125-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
-126                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-126-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
-127                android:value="com.google.firebase.components.ComponentRegistrar" />
-127-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
-128            <meta-data
-128-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\omarm\.gradle\caches\transforms-3\2eca31ce77897ee9158dc1edf1ec075f\transformed\jetified-firebase-abt-21.1.1\AndroidManifest.xml:12:13-14:85
-129                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
-129-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\omarm\.gradle\caches\transforms-3\2eca31ce77897ee9158dc1edf1ec075f\transformed\jetified-firebase-abt-21.1.1\AndroidManifest.xml:13:17-109
-130                android:value="com.google.firebase.components.ComponentRegistrar" />
-130-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\omarm\.gradle\caches\transforms-3\2eca31ce77897ee9158dc1edf1ec075f\transformed\jetified-firebase-abt-21.1.1\AndroidManifest.xml:14:17-82
-131            <meta-data
-131-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\omarm\.gradle\caches\transforms-3\1225a950160081d1e01951832216e2c0\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:27:13-29:85
-132                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-132-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\omarm\.gradle\caches\transforms-3\1225a950160081d1e01951832216e2c0\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:28:17-115
-133                android:value="com.google.firebase.components.ComponentRegistrar" />
-133-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\omarm\.gradle\caches\transforms-3\1225a950160081d1e01951832216e2c0\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:29:17-82
-134        </service>
-135
-136        <provider
-136-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-19:20
-137            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-137-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-82
-138            android:authorities="com.example.mobify.flutter.image_provider"
-138-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-74
-139            android:exported="false"
-139-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
-140            android:grantUriPermissions="true" >
-140-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-47
-141            <meta-data
-141-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-18:75
-142                android:name="android.support.FILE_PROVIDER_PATHS"
-142-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-67
-143                android:resource="@xml/flutter_image_picker_file_paths" />
-143-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-72
-144        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
-145        <service
-145-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-33:19
-146            android:name="com.google.android.gms.metadata.ModuleDependencies"
-146-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-78
-147            android:enabled="false"
-147-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-36
-148            android:exported="false" >
-148-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
-149            <intent-filter>
-149-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-28:29
-150                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
-150-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-94
-150-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-91
-151            </intent-filter>
-152
-153            <meta-data
-153-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:36
-154                android:name="photopicker_activity:0:required"
-154-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-63
-155                android:value="" />
-155-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:32:17-33
-156        </service>
-157        <service
-157-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:22:9-25:40
-158            android:name="com.google.firebase.sessions.SessionLifecycleService"
-158-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:23:13-80
-159            android:enabled="true"
-159-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:24:13-35
-160            android:exported="false" />
-160-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:25:13-37
-161
-162        <activity
-162-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\omarm\.gradle\caches\transforms-3\14b322704d4e2bf3df95bc180f2fad1b\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-163            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-163-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\omarm\.gradle\caches\transforms-3\14b322704d4e2bf3df95bc180f2fad1b\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-164            android:exported="false"
-164-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\omarm\.gradle\caches\transforms-3\14b322704d4e2bf3df95bc180f2fad1b\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-165            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-165-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\omarm\.gradle\caches\transforms-3\14b322704d4e2bf3df95bc180f2fad1b\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-166
-167        <provider
-167-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
-168            android:name="com.google.firebase.provider.FirebaseInitProvider"
-168-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
-169            android:authorities="com.example.mobify.firebaseinitprovider"
-169-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
-170            android:directBootAware="true"
-170-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
-171            android:exported="false"
-171-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
-172            android:initOrder="100" />
-172-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
-173
-174        <uses-library
-174-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
-175            android:name="androidx.window.extensions"
-175-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
-176            android:required="false" />
-176-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
-177        <uses-library
-177-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
-178            android:name="androidx.window.sidecar"
-178-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
-179            android:required="false" />
-179-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
-180
-181        <meta-data
-181-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\omarm\.gradle\caches\transforms-3\7b4881d0d08dada2f4df61a6dcb57279\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
-182            android:name="com.google.android.gms.version"
-182-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\omarm\.gradle\caches\transforms-3\7b4881d0d08dada2f4df61a6dcb57279\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
-183            android:value="@integer/google_play_services_version" />
-183-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\omarm\.gradle\caches\transforms-3\7b4881d0d08dada2f4df61a6dcb57279\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
-184
-185        <provider
-185-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
-186            android:name="androidx.startup.InitializationProvider"
-186-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
-187            android:authorities="com.example.mobify.androidx-startup"
-187-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
-188            android:exported="false" >
-188-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
-189            <meta-data
-189-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
-190                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-190-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
-191                android:value="androidx.startup" />
-191-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+27    <permission
+27-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+28        android:name="com.example.mobify.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+28-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+29        android:protectionLevel="signature" />
+29-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+30
+31    <uses-permission android:name="com.example.mobify.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Replace with your actual package name -->
+31-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+31-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+32    <application
+33        android:name="android.app.Application"
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.13.1] C:\Users\omarm\.gradle\caches\transforms-3\fac84cd5ecf1ec88a8c98571217c9350\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+35        android:debuggable="true"
+36        android:icon="@mipmap/ic_launcher"
+37        android:label="mobify"
+38        android:theme="@style/LaunchTheme" >
+39        <activity
+40            android:name="com.example.mobify.MainActivity"
+41            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+42            android:exported="true"
+43            android:hardwareAccelerated="true"
+44            android:launchMode="singleTop"
+45            android:taskAffinity=""
+46            android:theme="@style/LaunchTheme"
+47            android:windowSoftInputMode="adjustResize" >
+48
+49            <!--
+50                 Specifies an Android theme to apply to this Activity as soon as
+51                 the Android process has started. This theme is visible to the user
+52                 while the Flutter UI initializes. After that, this theme continues
+53                 to determine the Window background behind the Flutter UI.
+54            -->
+55            <meta-data
+56                android:name="io.flutter.embedding.android.NormalTheme"
+57                android:resource="@style/NormalTheme" />
+58
+59            <intent-filter>
+60                <action android:name="android.intent.action.MAIN" />
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+63            </intent-filter>
+64        </activity>
+65
+66        <!-- Flutter tool metadata -->
+67        <meta-data
+68            android:name="flutterEmbedding"
+69            android:value="2" />
+70
+71        <service
+71-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+72            android:name="com.google.firebase.components.ComponentDiscoveryService"
+72-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-89
+73            android:directBootAware="true"
+73-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+74            android:exported="false" >
+74-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:14:13-37
+75            <meta-data
+75-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+76                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+76-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-134
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[:cloud_firestore] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+78            <meta-data
+78-->[:firebase_crashlytics] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+79                android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.FlutterFirebaseAppRegistrar"
+79-->[:firebase_crashlytics] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-130
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[:firebase_crashlytics] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_crashlytics\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+81            <meta-data
+81-->[:firebase_remote_config] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_remote_config\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+82                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firebaseremoteconfig.FlutterFirebaseAppRegistrar"
+82-->[:firebase_remote_config] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_remote_config\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-139
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[:firebase_remote_config] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_remote_config\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+84            <meta-data
+84-->[:firebase_core] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+85                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+85-->[:firebase_core] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[:firebase_core] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:15:13-17:85
+88                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+88-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:16:17-126
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:17:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:18:13-20:85
+91                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+91-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:19:17-115
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-crashlytics:19.0.1] C:\Users\omarm\.gradle\caches\transforms-3\b1e31535d4702b49a3d00c38eb3258bb\transformed\jetified-firebase-crashlytics-19.0.1\AndroidManifest.xml:20:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:17:13-19:85
+94                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+94-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:18:17-122
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:19:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:20:13-22:85
+97                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+97-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:21:17-111
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-firestore:25.0.0] C:\Users\omarm\.gradle\caches\transforms-3\40e33394bc9057da5a6bbd16d1af31c6\transformed\jetified-firebase-firestore-25.0.0\AndroidManifest.xml:22:17-82
+99            <meta-data
+99-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:29:13-31:85
+100                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+100-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:30:17-128
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:31:17-82
+102            <meta-data
+102-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:32:13-34:85
+103                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+103-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:33:17-117
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.firebase:firebase-config:22.0.0] C:\Users\omarm\.gradle\caches\transforms-3\700ae3c6439e0d719ec499df198f7a47\transformed\jetified-firebase-config-22.0.0\AndroidManifest.xml:34:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:29:13-31:85
+106                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+106-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:30:17-117
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:31:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
+109                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+109-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
+112                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+112-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\omarm\.gradle\caches\transforms-3\5e936ca1975c1f7d3024b5397d28bd1e\transformed\jetified-firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\8b848a1bea5784066baf3652a1559cd1\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+115                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+115-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\8b848a1bea5784066baf3652a1559cd1\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\8b848a1bea5784066baf3652a1559cd1\transformed\jetified-firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+117            <meta-data
+117-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+118                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+118-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+120            <meta-data
+120-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\omarm\.gradle\caches\transforms-3\2eca31ce77897ee9158dc1edf1ec075f\transformed\jetified-firebase-abt-21.1.1\AndroidManifest.xml:12:13-14:85
+121                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+121-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\omarm\.gradle\caches\transforms-3\2eca31ce77897ee9158dc1edf1ec075f\transformed\jetified-firebase-abt-21.1.1\AndroidManifest.xml:13:17-109
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.firebase:firebase-abt:21.1.1] C:\Users\omarm\.gradle\caches\transforms-3\2eca31ce77897ee9158dc1edf1ec075f\transformed\jetified-firebase-abt-21.1.1\AndroidManifest.xml:14:17-82
+123            <meta-data
+123-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\omarm\.gradle\caches\transforms-3\1225a950160081d1e01951832216e2c0\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:27:13-29:85
+124                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+124-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\omarm\.gradle\caches\transforms-3\1225a950160081d1e01951832216e2c0\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:28:17-115
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[com.google.firebase:firebase-datatransport:18.1.8] C:\Users\omarm\.gradle\caches\transforms-3\1225a950160081d1e01951832216e2c0\transformed\jetified-firebase-datatransport-18.1.8\AndroidManifest.xml:29:17-82
+126        </service>
+127
+128        <provider
+128-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-19:20
+129            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+129-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-82
+130            android:authorities="com.example.mobify.flutter.image_provider"
+130-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-74
+131            android:exported="false"
+131-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
+132            android:grantUriPermissions="true" >
+132-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-47
+133            <meta-data
+133-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-18:75
+134                android:name="android.support.FILE_PROVIDER_PATHS"
+134-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-67
+135                android:resource="@xml/flutter_image_picker_file_paths" />
+135-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-72
+136        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+137        <service
+137-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-33:19
+138            android:name="com.google.android.gms.metadata.ModuleDependencies"
+138-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-78
+139            android:enabled="false"
+139-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-36
+140            android:exported="false" >
+140-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+141            <intent-filter>
+141-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-28:29
+142                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+142-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-94
+142-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-91
+143            </intent-filter>
+144
+145            <meta-data
+145-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-32:36
+146                android:name="photopicker_activity:0:required"
+146-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:31:17-63
+147                android:value="" />
+147-->[:image_picker_android] C:\Users\omarm\Desktop\ITI-Summer-Intern\mobify\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:32:17-33
+148        </service>
+149        <service
+149-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:22:9-25:40
+150            android:name="com.google.firebase.sessions.SessionLifecycleService"
+150-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:23:13-80
+151            android:enabled="true"
+151-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:24:13-35
+152            android:exported="false" />
+152-->[com.google.firebase:firebase-sessions:2.0.1] C:\Users\omarm\.gradle\caches\transforms-3\57acbd9d98fa00b94e5890e8d0c11909\transformed\jetified-firebase-sessions-2.0.1\AndroidManifest.xml:25:13-37
+153
+154        <activity
+154-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\omarm\.gradle\caches\transforms-3\14b322704d4e2bf3df95bc180f2fad1b\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+155            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+155-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\omarm\.gradle\caches\transforms-3\14b322704d4e2bf3df95bc180f2fad1b\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+156            android:exported="false"
+156-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\omarm\.gradle\caches\transforms-3\14b322704d4e2bf3df95bc180f2fad1b\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+157            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+157-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\omarm\.gradle\caches\transforms-3\14b322704d4e2bf3df95bc180f2fad1b\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+158
+159        <provider
+159-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+160            android:name="com.google.firebase.provider.FirebaseInitProvider"
+160-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+161            android:authorities="com.example.mobify.firebaseinitprovider"
+161-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+162            android:directBootAware="true"
+162-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+163            android:exported="false"
+163-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+164            android:initOrder="100" />
+164-->[com.google.firebase:firebase-common:21.0.0] C:\Users\omarm\.gradle\caches\transforms-3\cb6bf9b8e2dcc9f49a7d25207a8520f6\transformed\jetified-firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+165
+166        <uses-library
+166-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+167            android:name="androidx.window.extensions"
+167-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+168            android:required="false" />
+168-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+169        <uses-library
+169-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+170            android:name="androidx.window.sidecar"
+170-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+171            android:required="false" />
+171-->[androidx.window:window:1.2.0] C:\Users\omarm\.gradle\caches\transforms-3\d47b1192960df52846144d82ac9e1d6f\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+172
+173        <meta-data
+173-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\omarm\.gradle\caches\transforms-3\7b4881d0d08dada2f4df61a6dcb57279\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+174            android:name="com.google.android.gms.version"
+174-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\omarm\.gradle\caches\transforms-3\7b4881d0d08dada2f4df61a6dcb57279\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+175            android:value="@integer/google_play_services_version" />
+175-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\omarm\.gradle\caches\transforms-3\7b4881d0d08dada2f4df61a6dcb57279\transformed\jetified-play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+176
+177        <provider
+177-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+178            android:name="androidx.startup.InitializationProvider"
+178-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+179            android:authorities="com.example.mobify.androidx-startup"
+179-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+180            android:exported="false" >
+180-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+181            <meta-data
+181-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+182                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+182-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+183                android:value="androidx.startup" />
+183-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\omarm\.gradle\caches\transforms-3\d674cd90e13def17f77b3f8010d35e09\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+184            <meta-data
+184-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+185                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+185-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+186                android:value="androidx.startup" />
+186-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+187        </provider>
+188
+189        <service
+189-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
+190            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+190-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
+191            android:exported="false" >
+191-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
 192            <meta-data
-192-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-193                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-193-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-194                android:value="androidx.startup" />
-194-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-195        </provider>
+192-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
+193                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+193-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
+194                android:value="cct" />
+194-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
+195        </service>
 196
-197        <service
-197-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:28:9-34:19
-198            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-198-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:29:13-103
-199            android:exported="false" >
-199-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:30:13-37
-200            <meta-data
-200-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:31:13-33:39
-201                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-201-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:32:17-94
-202                android:value="cct" />
-202-->[com.google.android.datatransport:transport-backend-cct:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\0374fa475340658d29aaf6e67e890c4e\transformed\jetified-transport-backend-cct-3.1.9\AndroidManifest.xml:33:17-36
-203        </service>
-204
-205        <receiver
-205-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-206            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-206-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-207            android:directBootAware="false"
-207-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-208            android:enabled="true"
-208-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-209            android:exported="true"
-209-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-210            android:permission="android.permission.DUMP" >
-210-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-211            <intent-filter>
-211-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-212                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-212-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-212-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-213            </intent-filter>
-214            <intent-filter>
-214-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-215                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-215-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-215-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-216            </intent-filter>
-217            <intent-filter>
-217-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-218                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-218-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-218-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-219            </intent-filter>
-220            <intent-filter>
-220-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-221                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-221-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-221-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-222            </intent-filter>
-223        </receiver>
-224
-225        <service
-225-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
-226            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-226-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
-227            android:exported="false"
-227-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
-228            android:permission="android.permission.BIND_JOB_SERVICE" >
-228-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
-229        </service>
-230
-231        <receiver
-231-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
-232            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-232-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
-233            android:exported="false" />
-233-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
-234    </application>
-235
-236</manifest>
+197        <receiver
+197-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+198            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+198-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+199            android:directBootAware="false"
+199-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+200            android:enabled="true"
+200-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+201            android:exported="true"
+201-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+202            android:permission="android.permission.DUMP" >
+202-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+203            <intent-filter>
+203-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+204                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+204-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+204-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+205            </intent-filter>
+206            <intent-filter>
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+207                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+208            </intent-filter>
+209            <intent-filter>
+209-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+210                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+211            </intent-filter>
+212            <intent-filter>
+212-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+213                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+213-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+213-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\omarm\.gradle\caches\transforms-3\166e5df34c1c015ef6ddeae137513a3f\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+214            </intent-filter>
+215        </receiver>
+216
+217        <service
+217-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:26:9-30:19
+218            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+218-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:27:13-117
+219            android:exported="false"
+219-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:28:13-37
+220            android:permission="android.permission.BIND_JOB_SERVICE" >
+220-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:29:13-69
+221        </service>
+222
+223        <receiver
+223-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:32:9-34:40
+224            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+224-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:33:13-132
+225            android:exported="false" />
+225-->[com.google.android.datatransport:transport-runtime:3.1.9] C:\Users\omarm\.gradle\caches\transforms-3\5ee5efa39053b51e1eab7f513f8e1d4e\transformed\jetified-transport-runtime-3.1.9\AndroidManifest.xml:34:13-37
+226    </application>
+227
+228</manifest>

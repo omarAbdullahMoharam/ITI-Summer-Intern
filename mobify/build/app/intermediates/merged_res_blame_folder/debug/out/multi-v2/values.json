@@ -4,6 +4,214 @@
             "outputFile": "com.example.mobify.app-mergeDebugResources-31:/values/values.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\omarm\\Desktop\\ITI-Summer-Intern\\mobify\\android\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    },
+                    "to": {
+                        "startLines": "68",
+                        "startColumns": "4",
+                        "startOffsets": "2796",
+                        "endColumns": "56",
+                        "endOffsets": "2848"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\14b322704d4e2bf3df95bc180f2fad1b\\transformed\\jetified-play-services-base-18.0.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "60,61,62,63,64,65,66,67,165,166,167,168,169,170,171,172,174,175,176,177,178,179,180,181,182",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2125,2215,2295,2385,2475,2555,2636,2716,8730,8835,9016,9141,9248,9428,9551,9667,9937,10125,10230,10411,10536,10711,10859,10922,10984",
+                        "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78",
+                        "endOffsets": "2210,2290,2380,2470,2550,2631,2711,2791,8830,9011,9136,9243,9423,9546,9662,9765,10120,10225,10406,10531,10706,10854,10917,10979,11058"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\c683cde5b1f5377825fe27da54e1b718\\transformed\\fragment-1.7.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1",
+                        "startColumns": "-1,-1,-1",
+                        "startOffsets": "-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "129,133,154",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "6634,6803,7934",
+                        "endColumns": "56,64,63",
+                        "endOffsets": "6686,6863,7993"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\7b4881d0d08dada2f4df61a6dcb57279\\transformed\\jetified-play-services-basement-18.3.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "155,173",
+                        "startColumns": "4,4",
+                        "startOffsets": "7998,9770",
+                        "endColumns": "67,166",
+                        "endOffsets": "8061,9932"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\fac84cd5ecf1ec88a8c98571217c9350\\transformed\\core-1.13.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "25,56,57,58,59,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,130,131,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,156,158,159,160,161,162,163,164,183,195,196,200,201,205,206,207",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "775,1834,1906,1994,2059,2853,2922,2985,3055,3123,3195,3265,3326,3400,3473,3534,3595,3657,3721,3783,3844,3912,4012,4072,4138,4211,4280,4337,4389,4451,4523,4599,4664,4723,4782,4842,4902,4962,5022,5082,5142,5202,5262,5322,5382,5441,5501,5561,5621,5681,5741,5801,5861,5921,5981,6041,6100,6160,6220,6279,6338,6397,6456,6515,6691,6726,6868,6923,6986,7041,7099,7157,7218,7281,7338,7389,7439,7500,7557,7623,7657,7692,8066,8219,8286,8358,8427,8496,8570,8642,11063,11755,11872,12073,12183,12384,12513,12585",
+                        "endLines": "25,56,57,58,59,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,130,131,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,156,158,159,160,161,162,163,164,183,195,199,200,204,205,206,207",
+                        "endColumns": "59,71,87,64,65,68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,64,58,58,59,59,59,59,59,59,59,59,59,59,58,59,59,59,59,59,59,59,59,59,59,58,59,59,58,58,58,58,58,58,34,34,54,62,54,57,57,60,62,56,50,49,60,56,65,33,34,34,69,66,71,68,68,73,71,87,70,116,12,109,12,128,71,66",
+                        "endOffsets": "830,1901,1989,2054,2120,2917,2980,3050,3118,3190,3260,3321,3395,3468,3529,3590,3652,3716,3778,3839,3907,4007,4067,4133,4206,4275,4332,4384,4446,4518,4594,4659,4718,4777,4837,4897,4957,5017,5077,5137,5197,5257,5317,5377,5436,5496,5556,5616,5676,5736,5796,5856,5916,5976,6036,6095,6155,6215,6274,6333,6392,6451,6510,6569,6721,6756,6918,6981,7036,7094,7152,7213,7276,7333,7384,7434,7495,7552,7618,7652,7687,7722,8131,8281,8353,8422,8491,8565,8637,8725,11129,11867,12068,12178,12379,12508,12580,12647"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\98474e5913354eaede53aaa879a4dd8b\\transformed\\lifecycle-runtime-2.7.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "150",
+                        "startColumns": "4",
+                        "startOffsets": "7727",
+                        "endColumns": "42",
+                        "endOffsets": "7765"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\Desktop\\ITI-Summer-Intern\\mobify\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,18",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,1095",
+                        "endLines": "11,20",
+                        "endColumns": "12,12",
+                        "endOffsets": "748,1259"
+                    },
+                    "to": {
+                        "startLines": "184,192",
+                        "startColumns": "4,4",
+                        "startOffsets": "11134,11586",
+                        "endLines": "191,194",
+                        "endColumns": "12,12",
+                        "endOffsets": "11581,11750"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\Desktop\\ITI-Summer-Intern\\mobify\\build\\firebase_crashlytics\\intermediates\\packaged_res\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "55",
+                        "startColumns": "4",
+                        "startOffsets": "1773",
+                        "endColumns": "60",
+                        "endOffsets": "1829"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\4ee1d1c3643bd699aea17aa2adbcb7ee\\transformed\\jetified-startup-runtime-1.1.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "157",
+                        "startColumns": "4",
+                        "startOffsets": "8136",
+                        "endColumns": "82",
+                        "endOffsets": "8214"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\d47b1192960df52846144d82ac9e1d6f\\transformed\\jetified-window-1.2.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,9,17,26,38,44,50,51,52,53,54,128",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,164,337,556,835,1149,1337,1524,1577,1637,1689,1734,6574",
+                        "endLines": "2,8,16,24,37,43,49,50,51,52,53,54,128",
+                        "endColumns": "58,11,11,11,11,11,11,52,59,51,44,38,59",
+                        "endOffsets": "159,332,551,770,1144,1332,1519,1572,1632,1684,1729,1768,6629"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\2e94595ca22e3aadcdebdc547820608c\\transformed\\lifecycle-viewmodel-2.7.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "153",
+                        "startColumns": "4",
+                        "startOffsets": "7884",
+                        "endColumns": "49",
+                        "endOffsets": "7929"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\8d9ab232f64f5da73b6b55c8d6b9e038\\transformed\\jetified-activity-1.9.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1,-1",
+                        "startColumns": "-1,-1",
+                        "startOffsets": "-1,-1"
+                    },
+                    "to": {
+                        "startLines": "132,151",
+                        "startColumns": "4,4",
+                        "startOffsets": "6761,7770",
+                        "endColumns": "41,59",
+                        "endOffsets": "6798,7825"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\aadceac8ee0316c01a9163bad1a5e0ed\\transformed\\jetified-savedstate-1.2.1\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "152",
+                        "startColumns": "4",
+                        "startOffsets": "7830",
+                        "endColumns": "53",
+                        "endOffsets": "7879"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\omarm\\.gradle\\daemon\\7.6.3\\com.example.mobify.app-mergeDebugResources-31:\\values\\values.xml",
+            "map": [
+                {
                     "source": "C:\\Users\\omarm\\.gradle\\caches\\transforms-3\\98474e5913354eaede53aaa879a4dd8b\\transformed\\lifecycle-runtime-2.7.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
