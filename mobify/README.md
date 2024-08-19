@@ -78,6 +78,8 @@ The Mobile Store Application is a feature-rich mobile app developed using Flutte
       
       3- View the cart contents with persistent storage.
 
+
+
 **Contributing**
     
     1- Fork the repository.
