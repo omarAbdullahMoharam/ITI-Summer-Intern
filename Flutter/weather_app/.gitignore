@@ -12,7 +12,8 @@ migrate_working_dir/
 # Flutter build artifacts
 build/
 .dart_tool/
-
+build/app/outputs/flutter-apk/app-debug.apk
+build/app/outputs/apk/debug/app-debug.apk
 
 # IntelliJ related
 *.iml
