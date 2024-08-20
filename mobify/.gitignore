@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Flutter/Dart/Pub specific
 .dart_tool/
 .packages
@@ -9,6 +8,8 @@
 .flutter-plugins-dependencies
 .flutter-plugins-dependencies.lock
 .flutter-versions
+mobify/build/
+mobify/.dart_tool/
 
 
 # Generated files
@@ -60,7 +61,6 @@ macos/Flutter/GeneratedPluginRegistrant.*
 mobify/build/
 
 
-=======
 # Flutter/Dart/Pub related
 .dart_tool/
 .packages
@@ -166,4 +166,3 @@ coverage/
 # Mobile-specific files
 *.apk
 *.ipa
->>>>>>> 71d98ea17f5dc6ef8de76898727311cbea462b55
