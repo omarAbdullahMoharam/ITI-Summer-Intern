@@ -34,7 +34,7 @@ void main() async {
   runApp(
     DevicePreview(
       enabled: false,
-      builder: (context) => materialApp, // Wrap your app
+      builder: (context) => materialApp,
     ),
   );
 }
