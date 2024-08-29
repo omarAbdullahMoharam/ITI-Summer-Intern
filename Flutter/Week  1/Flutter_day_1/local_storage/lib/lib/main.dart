@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -50,7 +51,7 @@ class _LazyLoadingGridState extends State<LazyLoadingGrid> {
     setState(() {
       _isLoading = true;
     });
-    print("Featching Data");
+    log("Featching Data");
     final response = await http.get(Uri.parse(
         "https://jsonplaceholder.typicode.com/posts?_start=${_page * 10}&_limit=10"));
     if (response.statusCode == 200) {
@@ -62,7 +63,7 @@ class _LazyLoadingGridState extends State<LazyLoadingGrid> {
         _items.addAll(newItems.map((item) => item['id'].toString()).toList());
       });
     } else {
-      print("Failed to get data ");
+      log("Failed to get data ");
 
       setState(() {
         _isLoading = false;
