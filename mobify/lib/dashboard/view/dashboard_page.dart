@@ -4,8 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mobile_app/core/cubit/parent_cubit.dart';
 import 'package:mobile_app/core/utils/context_extention.dart';
 import 'package:mobile_app/dashboard/controller/cubit/dashboard_cubit.dart';
-import 'package:mobile_app/dashboard/modules/Cart/Controller/cart_cubit.dart';
-import 'package:mobile_app/dashboard/modules/Cart/Model/cart_model.dart';
 import 'package:mobile_app/dashboard/modules/Cart/View/cart_page.dart';
 import 'package:mobile_app/dashboard/modules/Cart/View/constantCart.dart';
 import 'package:mobile_app/dashboard/modules/Fav/View/fav_page.dart';

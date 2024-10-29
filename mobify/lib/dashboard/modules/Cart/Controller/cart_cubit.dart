@@ -68,7 +68,7 @@ class CartCubit extends Cubit<CartState> {
   void addQuantity(int id) {
     final index = state.cart.indexWhere((element) => element.id == id);
     final newCart = List.of(state.cart);
-    newCart[index].quantity = (newCart[index].quantity! + 1);
+    newCart[index].quantity = (newCart[index].quantity + 1);
     emit(state.copyWith(cart: newCart));
     _setPrefsItems();
   }
