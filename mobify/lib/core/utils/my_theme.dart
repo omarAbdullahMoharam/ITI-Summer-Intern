@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MyTheme {
   static final MyTheme Instance = MyTheme();
 
   ThemeData light = ThemeData.light(useMaterial3: true).copyWith(
     colorScheme: ColorScheme.light(
-      background: Color.fromARGB(255, 255, 255, 255),
+      surface: Color.fromARGB(255, 255, 255, 255),
     ),
     appBarTheme: AppBarTheme(
       backgroundColor: Color.fromARGB(255, 127, 158, 238),
@@ -30,7 +29,7 @@ class MyTheme {
 
   ThemeData dark = ThemeData.dark().copyWith(
     colorScheme: ColorScheme.dark(
-      background: Color.fromARGB(255, 0, 0, 0),
+      surface: Color.fromARGB(255, 0, 0, 0),
     ),
     textTheme: TextTheme(
       displayLarge: TextStyle(
