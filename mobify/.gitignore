@@ -10,6 +10,9 @@
 .flutter-versions
 mobify/build/
 mobify/.dart_tool/
+/build/
+/.dart_tool/
+
 
 
 # Generated files
