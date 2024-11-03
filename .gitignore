@@ -51,3 +51,175 @@ macos/Flutter/GeneratedPluginRegistrant.*
 *.key
 *.crt
 .keystore
+
+# Flutter/Dart/Pub specific
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-plugins-dependencies.lock
+.flutter-versions
+mobify/build/
+mobify/.dart_tool/
+/build/
+/.dart_tool/
+
+
+
+# Generated files
+**/GeneratedPluginRegistrant.*
+**/ServiceWorkerDatabase.db
+**/ServiceWorkerStorage
+
+# iOS builds
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/ServiceWorkerDatabase.db
+ios/ServiceWorkerStorage
+
+# Android builds
+android/.gradle/
+android/app/build/
+android/app/app.iml
+
+# Web build
+web/ServiceWorkerDatabase.db
+web/ServiceWorkerStorage
+
+# Windows builds
+windows/flutter/ephemeral/
+windows/flutter/GeneratedPluginRegistrant.*
+windows/flutter/bin/
+
+# macOS builds
+macos/Flutter/ephemeral/
+macos/Flutter/GeneratedPluginRegistrant.*
+
+# IntelliJ/Android Studio/VS Code settings
+.idea/
+*.iml
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Flutter environment and security files
+.env
+*.key
+*.crt
+.keystore
+
+# Ignore APKs and build files
+*.apk
+*.dill
+mobify/build/
+
+
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub-cache/
+build/
+flutter_*.png
+
+# Specific to IntelliJ + Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Specific to VS Code
+.vscode/
+
+# Flutter specific files
+.flutter-plugins
+.flutter-plugins-dependencies
+.flutter-version
+*.flutter-plugins
+*.flutter-plugins-dependencies
+
+# Generated files
+*.log
+pubspec.lock
+
+# Dependency directories
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/gradle/
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/gradle/
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/gradle/wrapper/
+android/build/
+ios/Pods/
+ios/Flutter/.last_build_id
+ios/Flutter/App.framework/
+ios/Flutter/Flutter.framework/
+ios/Flutter/Flutter.podspec
+ios/Flutter/Flutter.podspec.json
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ServiceDefinitions.json
+ios/Runner.xcodeproj/project.pbxproj
+ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Runner/FlutterEnginePluginRegistrant.*
+ios/Runner/Info.plist
+ios/Runner/ServiceDefinitions.json
+ios/Runner/Base.lproj/LaunchScreen.storyboard
+ios/Runner/Base.lproj/Main.storyboard
+ios/Runner/Assets.xcassets/LaunchImage.imageset/*
+ios/Runner/Assets.xcassets/LaunchScreen.storyboard
+ios/Runner/Base.lproj/Main.storyboard
+
+# iOS specific
+ios/Flutter/
+ios/Pods/
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Android specific
+android/.gradle/
+android/app/build/
+android/gradle/
+android/local.properties
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/build/
+android/gradle/wrapper/
+
+# macOS specific
+macos/Flutter/ephemeral/
+
+# Windows specific
+windows/flutter/ephemeral/
+
+# Linux specific
+linux/flutter/ephemeral/
+
+# Web related files
+web/.dart_tool/
+
+# Coverage
+coverage/
+
+# User-specific files
+*.swp
+*.swo
+*.tmp
+
+# Mobile-specific files
+*.apk
+*.ipa
